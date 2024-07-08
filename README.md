@@ -35,9 +35,8 @@ This notebook creates a dataset group in Amazon Personalize and imports the thre
 
 Explanation:
 
-Amazon Personalize: A machine learning service that enables the creation of personalized recommendations based on user data and interactions.
-
-User Personalization: This recipe uses collaborative filtering, which analyzes patterns of user behavior and interactions to generate personalized recommendations for each user.
+- ***Amazon Personalize***: A machine learning service that enables the creation of personalized recommendations based on user data and interactions.
+- ***User Personalization***: This recipe uses collaborative filtering, which analyzes patterns of user behavior and interactions to generate personalized recommendations for each user.
 
 Steps:
 
@@ -56,15 +55,15 @@ This notebook generates an email template using AWS Bedrock, populating it with 
 
 Explanation:
 
-AWS Bedrock: An open-source project that provides a comprehensive framework for building and deploying modern applications on AWS.
-Email Generation: AWS Bedrock can be used to generate personalized emails by leveraging its templating and data manipulation capabilities.
+- ***AWS Bedrock***: An open-source project that provides a comprehensive framework for building and deploying modern applications on AWS.
+- ***Email Generation***: AWS Bedrock can be used to generate personalized emails by leveraging Claude for template and data manipulation capabilities.
+
 Steps:
 
-Install and import necessary libraries (e.g., AWS Bedrock, Jinja2)
-Define an email template using Jinja2 templating engine
-Populate the template with personalized recommendations and user data
-Generate the email content for each user
-Explain how AWS Bedrock simplifies the email generation process
+1. Install and import necessary libraries (e.g., AWS Bedrock, Jinja2)
+2. Populate the template with personalized recommendations and user data
+3. Generate the email content for each user
+
 
 
 ### 4. Resource Cleanup
