@@ -17,7 +17,9 @@ Before running the notebooks, ensure that you have the following:
 This notebook takes an Amazon product dataset (amazon.csv) and filters it to extract relevant product and user data. It then writes the data back to DynamoDB and creates an interaction dataset. Finally, it saves these files to an Amazon S3 bucket.
 
 Explanation:
+
 DynamoDB: A fully managed NoSQL database service provided by AWS. It is used to store the product and user data for efficient retrieval.
+
 Amazon S3: A highly scalable and durable object storage service. It is used to store the interaction dataset for later use.
 
 Steps:
@@ -33,7 +35,9 @@ Steps:
 This notebook creates a dataset group in Amazon Personalize and imports the three files (product data, user data, and interaction data) created in the previous notebook. It defines the schema, chooses a user personalization recipe (e.g., USER_PERSONALIZATION), and generates five personalized recommendations for each user.
 
 Explanation:
+
 Amazon Personalize: A machine learning service that enables the creation of personalized recommendations based on user data and interactions.
+
 User Personalization: This recipe uses collaborative filtering, which analyzes patterns of user behavior and interactions to generate personalized recommendations for each user.
 
 Steps:
