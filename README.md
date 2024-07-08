@@ -2,7 +2,8 @@
 
 This repository contains four Jupyter notebooks that demonstrate how to build a personalized product recommendation system using Amazon Web Services (AWS). The notebooks cover data preparation, personalization with Amazon Personalize, email generation with AWS Bedrock, and resource cleanup.
 
-Prerequisites
+**Prerequisites**
+
 Before running the notebooks, ensure that you have the following:
 
 AWS account with appropriate permissions
