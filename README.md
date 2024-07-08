@@ -6,11 +6,9 @@ This repository contains four Jupyter notebooks that demonstrate how to build a 
 
 Before running the notebooks, ensure that you have the following:
 
-AWS account with appropriate permissions
-
-Jupyter Notebook environment set up
-
-Python and necessary libraries installed (e.g., boto3, pandas)
+1. AWS account with appropriate permissions
+2. Jupyter Notebook environment set up
+3. Python and necessary libraries installed (e.g., boto3, pandas)
 
 # Notebooks
 
@@ -50,7 +48,7 @@ C6. reate a solution and start the model training process
 8. Generate five personalized recommendations for each user
 
   
-## 3. Email Generation with AWS Bedrock
+### 3. Email Generation with AWS Bedrock
 This notebook generates an email template using AWS Bedrock, populating it with personalized recommendations and the user's name. It explains how AWS Bedrock works in this case and how it simplifies the process of generating and sending personalized emails.
 
 Explanation:
