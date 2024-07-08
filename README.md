@@ -40,7 +40,8 @@ Before running the notebooks, ensure that you have the following:
 
 
 # Architecture
-<img width="859" alt="Screenshot 2024-07-08 at 12 17 41 PM" src="https://github.com/anyakhatri/Personalize-Recommendations-and-Emails-with-Bedrock/assets/88737540/eb58ba7c-f9dd-4706-8a8a-fda9c6e61fa1">
+
+<img width="1125" alt="Screenshot 2024-07-08 at 12 23 56 PM" src="https://github.com/anyakhatri/Personalize-Recommendations-and-Emails-with-Bedrock/assets/88737540/b062479d-db7c-4121-a88f-c88acc30325d">
 
 
 # Notebooks
