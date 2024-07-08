@@ -38,6 +38,11 @@ Before running the notebooks, ensure that you have the following:
 2. Jupyter Notebook environment set up
 3. Python and necessary libraries installed (e.g., boto3, pandas)
 
+
+# Architecture
+<img width="859" alt="Screenshot 2024-07-08 at 12 17 41 PM" src="https://github.com/anyakhatri/Personalize-Recommendations-and-Emails-with-Bedrock/assets/88737540/eb58ba7c-f9dd-4706-8a8a-fda9c6e61fa1">
+
+
 # Notebooks
 
 ### 1. Data Preparation
