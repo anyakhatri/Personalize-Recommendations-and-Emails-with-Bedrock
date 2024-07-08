@@ -5,7 +5,7 @@
 ### Introduction
 
 
-# overview and flow of solution
+- overview and flow of solution, customer impact, what and why
 In today's digital age, personalization has become a key differentiator for businesses to enhance customer experiences and drive engagement. Recommendation systems play a crucial role in delivering personalized content and product suggestions to users based on their preferences and behaviors.
 
 Amazon Personalize is a machine learning service provided by Amazon Web Services (AWS) that enables developers to build and deploy personalized recommendation engines quickly and easily. It offers a variety of algorithms and recipes tailored for different use cases, such as user personalization (collaborative filtering) and product recommendations (content-based filtering).
