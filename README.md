@@ -18,8 +18,8 @@ This notebook takes an Amazon product dataset (amazon.csv) and filters it to ext
 
 Explanation:
 
-1. ***DynamoDB***: A fully managed NoSQL database service provided by AWS. It is used to store the product and user data for efficient retrieval.
-2. ***Amazon S3***: A highly scalable and durable object storage service. It is used to store the interaction dataset for later use.
+- ***DynamoDB***: A fully managed NoSQL database service provided by AWS. It is used to store the product and user data for efficient retrieval.
+- ***Amazon S3***: A highly scalable and durable object storage service. It is used to store the interaction dataset for later use.
 
 Steps:
 1. Install and import necessary libraries (e.g., boto3, pandas)
