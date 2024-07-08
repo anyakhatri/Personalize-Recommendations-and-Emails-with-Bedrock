@@ -9,9 +9,11 @@ Before running the notebooks, ensure that you have the following:
 AWS account with appropriate permissions
 Jupyter Notebook environment set up
 Python and necessary libraries installed (e.g., boto3, pandas)
-Notebooks
 
-1. Data Preparation
+# Notebooks
+
+## 1. Data Preparation
+
 This notebook takes an Amazon product dataset (amazon.csv) and filters it to extract relevant product and user data. It then writes the data back to DynamoDB and creates an interaction dataset. Finally, it saves these files to an Amazon S3 bucket.
 
 Explanation:
@@ -27,7 +29,9 @@ Filter the dataset to extract product and user data
 Write the product and user data to DynamoDB
 Create an interaction dataset
 Save the interaction dataset to an Amazon S3 bucket
-2. Personalization with Amazon Personalize
+
+##2. Personalization with Amazon Personalize
+
 This notebook creates a dataset group in Amazon Personalize and imports the three files (product data, user data, and interaction data) created in the previous notebook. It defines the schema, chooses a user personalization recipe (e.g., USER_PERSONALIZATION), and generates five personalized recommendations for each user.
 
 Explanation:
