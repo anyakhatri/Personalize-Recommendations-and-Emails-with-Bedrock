@@ -1,4 +1,5 @@
-Personalized Product Recommendation System
+# Personalized Product Recommendation System
+
 This repository contains four Jupyter notebooks that demonstrate how to build a personalized product recommendation system using Amazon Web Services (AWS). The notebooks cover data preparation, personalization with Amazon Personalize, email generation with AWS Bedrock, and resource cleanup.
 
 Prerequisites
@@ -8,12 +9,14 @@ AWS account with appropriate permissions
 Jupyter Notebook environment set up
 Python and necessary libraries installed (e.g., boto3, pandas)
 Notebooks
+
 1. Data Preparation
 This notebook takes an Amazon product dataset (amazon.csv) and filters it to extract relevant product and user data. It then writes the data back to DynamoDB and creates an interaction dataset. Finally, it saves these files to an Amazon S3 bucket.
 
 Explanation:
 
 DynamoDB: A fully managed NoSQL database service provided by AWS. It is used to store the product and user data for efficient retrieval.
+
 Amazon S3: A highly scalable and durable object storage service. It is used to store the interaction dataset for later use.
 Steps:
 
