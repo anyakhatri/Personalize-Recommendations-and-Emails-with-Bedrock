@@ -24,7 +24,8 @@ With Claude, you can:
 - Personalize Content: Leverage the integration with Amazon Personalize to populate email templates with personalized recommendations and user-specific content.
 - Automate Email Delivery: Automate the process of generating and sending personalized emails to your users, ensuring timely and relevant communication.
 - Track and Analyze: Monitor email delivery statistics and user engagement metrics to optimize your campaigns and improve personalization strategies.
-- 
+
+
 By combining the power of Amazon Personalize for generating accurate recommendations and AWS Bedrock with Claude for email automation, you can create a comprehensive personalized recommendation system that delivers a seamless and engaging user experience.
 
 In the following sections, we will explore the step-by-step process of building such a system, including data preparation, model training with Amazon Personalize, email template generation with Claude, and resource management.This repository contains four Jupyter notebooks that demonstrate how to build a personalized product recommendation system. The notebooks cover data preparation, personalization with Amazon Personalize, email generation with AWS Bedrock, and resource cleanup.
@@ -111,8 +112,9 @@ Clone the repository or download the notebooks to your local machine.
 1. Open the Jupyter Notebook environment.
 2. Navigate to the directory containing the notebooks.
 3. Run the notebooks in the following order:
-Data Preparation
-Personalization with Amazon Personalize
-Email Generation with AWS Bedrock
-Resource Cleanup
+
+(1) Dataset filtering
+(2) Personalization
+(3) Bedrock Implementation
+(4) Cleanup
 Note: Make sure to update the notebook cells with your AWS credentials and resource names (e.g., S3 bucket names, DynamoDB table names) before running them.
