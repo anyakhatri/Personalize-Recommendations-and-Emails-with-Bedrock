@@ -60,6 +60,10 @@ Before running the notebooks, ensure that you have the following:
    
    (4) Cleanup
 
+Region	Region Code	Launch stack
+US East (N. Virginia)	us-east-1	Launch Stack
+Europe (Ireland)	eu-west-1	Launch Stack
+Asia Pacific (Sydney)	ap-southeast-2	Launch Stack
 
 
 # Notebooks
