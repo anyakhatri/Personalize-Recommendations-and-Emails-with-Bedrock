@@ -21,7 +21,9 @@ By delivering personalized recommendations and tailored communications, customer
 
 ### Architecture
 
-<img width="859" alt="Screenshot 2024-07-08 at 12 17 41 PM" src="https://github.com/anyakhatri/Personalize-Recommendations-and-Emails-with-Bedrock/assets/88737540/51f56fb2-7923-4710-8b35-541274326e0c">
+<img width="884" alt="Screenshot 2024-07-09 at 9 47 09 AM" src="https://github.com/anyakhatri/Personalize-Recommendations-and-Emails-with-Bedrock/assets/88737540/70845e23-bfc5-45b6-9f85-eca697e5128e">
+
+
 
 **Prerequisites**
 
@@ -32,9 +34,28 @@ Before running the notebooks, ensure that you have the following:
 3. Python and necessary libraries installed (e.g., boto3, pandas)
 
 
-# Architecture
+# Deployment
 
-<img width="884" alt="Screenshot 2024-07-09 at 9 47 09 AM" src="https://github.com/anyakhatri/Personalize-Recommendations-and-Emails-with-Bedrock/assets/88737540/70845e23-bfc5-45b6-9f85-eca697e5128e">
+1. Deploy the CloudFormation Stack:
+   - Use the AWS Management Console, AWS CLI, or AWS CloudFormation APIs to create a new CloudFormation stack based on the template created in step 1
+   - Provide the required parameters, such as the S3 bucket name, notebook instance configuration, and any other necessary inputs.
+     
+2. Clone the Repository:
+   - Clone the repository containing the notebooks and necessary code for the workflow.
+   - This repository should include the data preprocessing, sentiment analysis, personalization, and email template integration scripts.
+
+3. Open the SageMaker Notebook Instance:
+   - Launch the SageMaker notebook instance provisioned by the CloudFormation stack.
+   - Upload the 4 notebooks in the same instance
+
+4. Run the Notebooks in Order
+   (1) Dataset filtering
+   
+   (2) Personalization
+   
+   (3) Bedrock Implementation
+   
+   (4) Cleanup
 
 
 
@@ -103,18 +124,3 @@ Steps:
 2. Delete the Amazon S3 bucket used for storing the interaction dataset
 3. Delete the Amazon Personalize dataset group, solution, and other related resources
 
-
-
-# Running the Notebooks
-To run the notebooks, follow these steps:
-
-Clone the repository or download the notebooks to your local machine.
-1. Open the Jupyter Notebook environment.
-2. Navigate to the directory containing the notebooks.
-3. Run the notebooks in the following order:
-
-(1) Dataset filtering
-(2) Personalization
-(3) Bedrock Implementation
-(4) Cleanup
-Note: Make sure to update the notebook cells with your AWS credentials and resource names (e.g., S3 bucket names, DynamoDB table names) before running them.
