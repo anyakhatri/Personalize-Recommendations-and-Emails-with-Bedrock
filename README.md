@@ -1,37 +1,27 @@
 # Personalized Product Recommendation System
 
 
-
-### Introduction
-
-
-- overview and flow of solution, customer impact, what and why
-In today's digital age, personalization has become a key differentiator for businesses to enhance customer experiences and drive engagement. Recommendation systems play a crucial role in delivering personalized content and product suggestions to users based on their preferences and behaviors.
-
-Amazon Personalize is a machine learning service provided by Amazon Web Services (AWS) that enables developers to build and deploy personalized recommendation engines quickly and easily. It offers a variety of algorithms and recipes tailored for different use cases, such as user personalization (collaborative filtering) and product recommendations (content-based filtering).
-
-Amazon Personalize is an excellent choice for building recommendation systems for several reasons:
-
-- Scalability: It can handle large volumes of data and high traffic loads, making it suitable for applications with millions of users and items.
-- Accuracy: Amazon Personalize leverages advanced machine learning techniques to provide accurate and relevant recommendations.
-- Ease of Use: It abstracts away the complexities of building and maintaining recommendation models, allowing developers to focus on integrating personalization into their applications.
-- Fully Managed: As a fully managed service, Amazon Personalize takes care of provisioning, scaling, and maintaining the underlying infrastructure, reducing operational overhead.
-Email Automation with AWS Bedrock and Claude
-While Amazon Personalize excels at generating personalized recommendations, delivering those recommendations to users in an engaging and timely manner is equally important. This is where AWS Bedrock and Claude come into play.
-
-AWS Bedrock is an open-source project that provides a comprehensive framework for building and deploying modern applications on AWS. It offers a robust set of tools and best practices for building serverless applications, automating deployments, and managing infrastructure as code. Claude, a component of AWS Bedrock, is a powerful email automation tool that simplifies the process of generating and sending personalized marketing emails. It integrates seamlessly with Amazon Personalize, allowing you to incorporate personalized recommendations into email templates and deliver targeted campaigns to your users.
-
-With Claude, you can:
-
-- Create Responsive Email Templates: Design and develop responsive email templates using modern web technologies like HTML, CSS, and JavaScript.
-- Personalize Content: Leverage the integration with Amazon Personalize to populate email templates with personalized recommendations and user-specific content.
-- Automate Email Delivery: Automate the process of generating and sending personalized emails to your users, ensuring timely and relevant communication.
-- Track and Analyze: Monitor email delivery statistics and user engagement metrics to optimize your campaigns and improve personalization strategies.
+# Table of Contents
 
 
-By combining the power of Amazon Personalize for generating accurate recommendations and AWS Bedrock with Claude for email automation, you can create a comprehensive personalized recommendation system that delivers a seamless and engaging user experience.
+1. Overview
 
-In the following sections, we will explore the step-by-step process of building such a system, including data preparation, model training with Amazon Personalize, email template generation with Claude, and resource management.This repository contains four Jupyter notebooks that demonstrate how to build a personalized product recommendation system. The notebooks cover data preparation, personalization with Amazon Personalize, email generation with AWS Bedrock, and resource cleanup.
+
+### Overview
+
+
+The primary intent for this solution is to deliver a personalized and engaging experience to customers, ultimately leading to increased customer satisfaction, loyalty, and revenue growth for the business. Customers expect seamless and tailored experiences that directly address their unique preferences and needs and achieving that level of personalization can be a challenge for businesses with large customer bases and catalogs.
+
+The workflow begins by ingesting data from Amazon S3, including product catalogs, customer information, and user interactions such as reviews on products. This data is then processed to extract relevant information about products and users and stored back to Amazon S3. Sentiment analysis using Amazon Comprehend is performed on user interactions, particularly product reviews, to gauge customers' preferences, opinions, and sentiments towards specific products or features. The extracted product and user data, along with the interaction data, are stored in Amazon DynamoDB for efficient data management and retrieval.
+
+Amazon Personalize, a machine learning service, plays a crucial role in generating personalized product recommendations for each customer. It leverages the stored data, including user preferences and entiment analysis results, to create tailored recommendations for each user. These personalized recommendations are then integrated into email templates using Amazon Bedrock Claude which ensures that each customer receives a dynamic and personalized email content tailored to their specific interests and needs.
+
+By delivering personalized recommendations and tailored communications, customers feel valued and understood, leading to increased satisfaction and loyalty. This personalized approach sets the business apart from competitors and creates a memorable and positive brand experience. Moreover, personalization has been proven to significantly impact conversion rates. By presenting customers with products and offers that align with their preferences, the likelihood of making a purchase increases, driving revenue growth for the business.
+
+
+### Architecture
+
+<img width="859" alt="Screenshot 2024-07-08 at 12 17 41 PM" src="https://github.com/anyakhatri/Personalize-Recommendations-and-Emails-with-Bedrock/assets/88737540/51f56fb2-7923-4710-8b35-541274326e0c">
 
 **Prerequisites**
 
