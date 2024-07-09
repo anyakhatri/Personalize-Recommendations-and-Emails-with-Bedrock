@@ -1,11 +1,10 @@
----
 AWSTemplateFormatVersion: 2010-09-09
 Description: Creates an S3 Bucket, IAM Roles & Policy, and SageMaker Notebook to work with Amazon Personalize.
 
 Parameters:
   BucketName:
     Type: String
-    Default: personalizeproductreviewdata
+    Default: personalizeproductreviewdat
     Description: The name of the S3 Bucket to create, use only lowercase characters and numbers, no special characters or spaces. Make sure to change it to a unique value.
 
   NotebookName:
@@ -33,43 +32,22 @@ Metadata:
 
 Resources:
   # Amazon S3 Bucket
-  # ---
   S3Bucket:
     Type: AWS::S3::Bucket
     Properties:
       BucketName: !Ref BucketName
-      # Tagging Ressources to leverage SSM's Application Manager.
-      # ---
       Tags:
         - Key: AppManagerCFNStackKey
           Value: !Ref 'AWS::StackId'
 
-  # AWS Cloudformation Custom Resource
-  # ---
-  # This custom resource calls AWS Lambda Function "BucketJanitor" before
-  # deleting the bucket as AWS Cloudformation doesn't allow to delete 
-  # non-empty buckets.
-  EmptyS3BucketOnDelete:
-    Type: Custom::janitor
-    Properties:
-      ServiceToken: 
-        Fn::GetAtt: 
-          - "BucketJanitor"
-          - "Arn"
-      BucketName: !Ref S3Bucket
-    DependsOn: AmazonS3BucketAccessPolicy
-
-
   # Amazon SageMaker Execution Role
-  # ---
   SageMakerIamRole:
     Type: "AWS::IAM::Role"
     Properties:
       AssumeRolePolicyDocument:
         Version: "2012-10-17"
         Statement:
-          -
-            Effect: Allow
+          - Effect: Allow
             Principal:
               Service: sagemaker.amazonaws.com
             Action: sts:AssumeRole
@@ -78,22 +56,18 @@ Resources:
         - "arn:aws:iam::aws:policy/AmazonSageMakerFullAccess"
         - "arn:aws:iam::aws:policy/service-role/AmazonPersonalizeFullAccess"
         - "arn:aws:iam::aws:policy/AmazonSSMReadOnlyAccess"
-      # Tagging Ressources to leverage SSM's Application Manager.
-      # ---
       Tags:
         - Key: AppManagerCFNStackKey
           Value: !Ref 'AWS::StackId'
 
   # Amazon Personalize Execution Role
-  # ---
   PersonalizeIamRole:
     Type: "AWS::IAM::Role"
     Properties:
       AssumeRolePolicyDocument:
         Version: '2012-10-17'
         Statement:
-          -
-            Effect: Allow
+          - Effect: Allow
             Principal:
               Service: personalize.amazonaws.com
             Action: sts:AssumeRole
@@ -101,51 +75,39 @@ Resources:
       ManagedPolicyArns:
         - "arn:aws:iam::aws:policy/service-role/AmazonPersonalizeFullAccess"
         - "arn:aws:iam::aws:policy/AmazonSSMReadOnlyAccess"
-      # Tagging Ressources to leverage SSM's Application Manager.
-      # ---
       Tags:
         - Key: AppManagerCFNStackKey
           Value: !Ref 'AWS::StackId'
 
   # AWS Identity and Access Management - S3 Custom Access Policy
-  # ---
-  # This policy allows Sagemaker and Personalize to perform any actions on the 
-  # S3 bucket created by this template
   AmazonS3BucketAccessPolicy:
-      Type: AWS::IAM::ManagedPolicy
-      Properties:
-        PolicyDocument:
-          Version: '2012-10-17'
-          Statement:
-            -
-              Effect: Allow
-              Action:
-                - "s3:*"
-              Resource:
-                - !Sub arn:aws:s3:::${S3Bucket}
-                - !Sub arn:aws:s3:::${S3Bucket}/*
-            -
-              Effect: Allow
-              Action:
-                - "s3:GetObject*"
-              Resource:
-                - !Sub arn:aws:s3:::elementalrodeo99-us-west-1/aim312
-                - !Sub arn:aws:s3:::elementalrodeo99-us-west-1/aim312/*
-            - 
-              Effect: Allow
-              Action:
-                - "bedrock:*"
-              Resource:
-                - "*"
-        Roles: 
-          - !Ref SageMakerIamRole
-          - !Ref PersonalizeIamRole
-          - !Ref BucketJanitorRole
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Action:
+              - "s3:*"
+            Resource:
+              - !Sub arn:aws:s3:::${S3Bucket}
+              - !Sub arn:aws:s3:::${S3Bucket}/*
+          - Effect: Allow
+            Action:
+              - "s3:GetObject*"
+            Resource:
+              - !Sub arn:aws:s3:::elementalrodeo99-us-west-1/aim312
+              - !Sub arn:aws:s3:::elementalrodeo99-us-west-1/aim312/*
+          - Effect: Allow
+            Action:
+              - "bedrock:*"
+            Resource:
+              - "*"
+      Roles:
+        - !Ref SageMakerIamRole
+        - !Ref PersonalizeIamRole
 
   # Amazon S3 - S3 Bucket Policy
-  # ---
-  # This policy allows Personalize to perform any actions on the 
-  # S3 bucket created by this template
   PersonalizeBucketPolicy:
     Type: AWS::S3::BucketPolicy
     Properties:
@@ -166,19 +128,15 @@ Resources:
               Service: personalize.amazonaws.com
 
   # SageMaker notebook
-  # ---
   NotebookInstance:
     Type: "AWS::SageMaker::NotebookInstance"
     Properties:
-      # bumped ml.t2.medium to ml.t3.medium for newer regions compatibility
       InstanceType: "ml.m7i.8xlarge"
       NotebookInstanceName: !Ref NotebookName
       RoleArn: !GetAtt SageMakerIamRole.Arn
       VolumeSizeInGB: !Ref VolumeSize
-      #DefaultCodeRepository: https://github.com/aws-samples/amazon-personalize-samples.git
 
   # SSM Parameter with the s3 bucket for personalize
-  # ---
   PersonalizeS3Bucket:
     Type: AWS::SSM::Parameter
     Properties:
@@ -186,14 +144,11 @@ Resources:
       Type: String
       Value: !Ref BucketName
       Description: SSM Parameter containing the s3 bucket for Personalize Samples.
-      # Tagging Ressources to leverage SSM's Application Manager.
-      # ---
       Tags:
         Key: AppManagerCFNStackKey
         Value: !Ref 'AWS::StackId'
 
   # SSM Parameter with the IAM Role for personalize
-  # ---
   PersonalizeIAMRole:
     Type: AWS::SSM::Parameter
     Properties:
@@ -201,8 +156,6 @@ Resources:
       Type: String
       Value: !GetAtt PersonalizeIamRole.Arn
       Description: SSM Parameter containing the iam role arn for Personalize.
-      # Tagging Ressources to leverage SSM's Application Manager.
-      # ---
       Tags:
         Key: AppManagerCFNStackKey
         Value: !Ref 'AWS::StackId'
