@@ -6,6 +6,7 @@
 
 1. Overview
 2. Deployment
+3. Notebooks
 
 
 # Overview
@@ -22,7 +23,7 @@ By delivering personalized recommendations and tailored communications, customer
 
 ### Architecture
 
-<img width="884" alt="Screenshot 2024-07-09 at 9 47 09 AM" src="https://github.com/anyakhatri/Personalize-Recommendations-and-Emails-with-Bedrock/assets/88737540/70845e23-bfc5-45b6-9f85-eca697e5128e">
+<img width="877" alt="Screenshot 2024-07-09 at 11 01 09 AM" src="https://github.com/anyakhatri/Personalize-Recommendations-and-Emails-with-Bedrock/assets/88737540/5725b3a3-e227-43f5-a0d1-8bc38e806339">
 
 
 
