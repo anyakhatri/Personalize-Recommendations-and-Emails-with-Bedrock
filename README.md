@@ -96,7 +96,7 @@ Steps:
 3. Import the product data, user data, and interaction data files into the dataset group
 4. Define the schema for the dataset group
 5. Choose the USER_PERSONALIZATION recipe
-C6. reate a solution and start the model training process
+6. Create a solution and start the model training process
 7. Deploy the solution for real-time recommendations
 8. Generate five personalized recommendations for each user
 
