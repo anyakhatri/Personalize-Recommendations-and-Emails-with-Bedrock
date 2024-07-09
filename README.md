@@ -50,6 +50,7 @@ Before running the notebooks, ensure that you have the following:
    - Upload the 4 notebooks in the same instance
 
 4. Run the Notebooks in Order
+
    (1) Dataset filtering
    
    (2) Personalization
