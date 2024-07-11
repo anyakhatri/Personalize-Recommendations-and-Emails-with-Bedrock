@@ -5,8 +5,13 @@
 
 
 1. Overview
-2. Deployment
-3. Notebooks
+   - Architecture
+3. Deployment
+4. Notebooks
+   - Data Preparation
+   - Personalization with Amazon Personalize
+   - Email Generation with Amazon Bedrock
+   - Resource Cleanup
 
 
 # Overview
@@ -101,12 +106,12 @@ Steps:
 8. Generate five personalized recommendations for each user
 
   
-### 3. Email Generation with AWS Bedrock
-This notebook generates an email template using AWS Bedrock, populating it with personalized recommendations and the user's name. It explains how AWS Bedrock works in this case and how it simplifies the process of generating and sending personalized emails.
+### 3. Email Generation with Amazon Bedrock
+This notebook generates an email template using Amazon Bedrock, populating it with personalized recommendations and the user's name. It explains how AWS Bedrock works in this case and how it simplifies the process of generating and sending personalized emails.
 
 Explanation:
 
-- ***AWS Bedrock***: An open-source project that provides a comprehensive framework for building and deploying modern applications on AWS.
+- ***Amazon Bedrock***: An open-source project that provides a comprehensive framework for building and deploying modern applications on AWS.
 - ***Email Generation***: AWS Bedrock can be used to generate personalized emails by leveraging Claude for template and data manipulation capabilities.
 
 Steps:
