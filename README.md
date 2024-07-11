@@ -3,10 +3,10 @@
 
 # Table of Contents
 
-- [Overview](#overview)
--   [Architecture](#architecture)
-- [Deployment](#deployment)
-- [Notebooks](#notebooks)
+1. [Overview](#overview)
+  - [Architecture](#architecture)
+2. [Deployment](#deployment)
+3. [Notebooks](#notebooks)
   - [Data Preparation](#data-preparation)
   - [Personalization with Amazon Personalize](#personalization-with-amazon-personalize)
   - [Email Generation with Amazon Bedrock](#email-generation-with-amazon-bedrock)
