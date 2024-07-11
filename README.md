@@ -120,7 +120,7 @@ Steps:
 
 
 
-### 4. Resource Cleanup
+### 4. Resource Cleanup (#resource-cleanup)
 This notebook provides instructions on how to clean up the resources created during the previous steps, such as deleting the DynamoDB tables, Amazon S3 buckets, and Amazon Personalize resources.
 
 Steps:
