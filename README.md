@@ -3,14 +3,14 @@
 
 # Table of Contents
 
-- [Overview](#overview)
-   - [Architecture](#architecture)
-- [Deployment](#deployment)
-- [Notebooks](#notebooks)
-  - [Data Preparation](#data-preparation)
-  - [Personalization with Amazon Personalize](#personalization-with-amazon-personalize)
-  - [Email Generation with Amazon Bedrock](#email-generation-with-amazon-bedrock)
-  - [Resource Cleanup](#resource-cleanup)
+1. [Overview](#overview)
+2. [Architecture](#architecture)
+3. [Deployment](#deployment)
+4. [Notebooks](#notebooks)
+   1. [Data Preparation](#data-preparation)
+   2. [Personalization with Amazon Personalize](#personalization-with-amazon-personalize)
+   3. [Email Generation with Amazon Bedrock](#email-generation-with-amazon-bedrock)
+   4. [Resource Cleanup](#resource-cleanup)
 
 # Overview
 
