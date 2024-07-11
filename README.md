@@ -3,15 +3,14 @@
 
 # Table of Contents
 
-
-1. Overview
-   - Architecture
-3. Deployment
-4. Notebooks
-   - Data Preparation
-   - Personalization with Amazon Personalize
-   - Email Generation with Amazon Bedrock
-   - Resource Cleanup
+- [Overview](#overview)
+- [Architecture](#architecture)
+- [Deployment](#deployment)
+- [Notebooks](#notebooks)
+  - [Data Preparation](#data-preparation)
+  - [Personalization with Amazon Personalize](#personalization-with-amazon-personalize)
+  - [Email Generation with Amazon Bedrock](#email-generation-with-amazon-bedrock)
+  - [Resource Cleanup](#resource-cleanup)
 
 
 # Overview
