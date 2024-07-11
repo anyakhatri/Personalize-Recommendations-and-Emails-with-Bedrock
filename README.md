@@ -4,7 +4,7 @@
 # Table of Contents
 
 - [Overview](#overview)
-- [Architecture](#architecture)
+-   [Architecture](#architecture)
 - [Deployment](#deployment)
 - [Notebooks](#notebooks)
   - [Data Preparation](#data-preparation)
