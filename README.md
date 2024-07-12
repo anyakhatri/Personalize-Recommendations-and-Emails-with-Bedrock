@@ -12,7 +12,7 @@
    3. [Email Generation with Amazon Bedrock](#email-generation-with-amazon-bedrock)
    4. [Resource Cleanup](#resource-cleanup)
 
-# Overview
+## Overview
 
 
 The primary intent for this solution is to deliver a personalized and engaging experience to customers, ultimately leading to increased customer satisfaction, loyalty, and revenue growth for the business. Customers expect seamless and tailored experiences that directly address their unique preferences and needs and achieving that level of personalization can be a challenge for businesses with large customer bases and catalogs.
@@ -49,7 +49,7 @@ When estimating the cost for this architecture, we are working with 1500 custome
 | Total | |  |
 
 
-# Prerequisites
+## Prerequisites
 
 Before running the notebooks, ensure that you have the following:
 
