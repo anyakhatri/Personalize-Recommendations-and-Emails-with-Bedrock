@@ -1,7 +1,7 @@
 # Personalized Product Recommendation System
 
 
-# Table of Contents
+## Table of Contents
 
 1. [Overview](#overview)
 2. [Architecture](#architecture)
@@ -58,7 +58,7 @@ Before running the notebooks, ensure that you have the following:
 3. Python and necessary libraries installed (e.g., boto3, pandas)
 
 
-# Deployment Steps
+## Deployment Steps
 
 1. Deploy the CloudFormation Stack:
    - Use the AWS Management Console, AWS CLI, or AWS CloudFormation APIs to create a new CloudFormation stack based on the template created in step 1
@@ -78,7 +78,7 @@ Before running the notebooks, ensure that you have the following:
 
    (1) Dataset filtering, (2) Personalization, (3) Bedrock Implementation, (4) Cleanup
 
-# Deployment Validation
+## Deployment Validation
 
 1. Open the AWS CloudFormation console and navigate to the stack you just created. Verify the status of the stack by checking the "Status" column. If the deployment is successful, the status should be "CREATE_COMPLETE".
 
@@ -89,7 +89,7 @@ Before running the notebooks, ensure that you have the following:
 
 If all the above steps are successful, it indicates that the deployment of the CloudFormation template is successful, and the required resources are created correctly.
 
-# Running the Guidance
+## Running the Guidance
 
 ### 1. Data Preparation
 
@@ -155,7 +155,7 @@ Steps:
 3. Delete the Amazon Personalize dataset group, solution, and other related resources
 
 
-# Next Steps
+## Next Steps
 
 Here are some suggestions and recommendations for customers to further enhance this Guidance according to their requirements:
 
@@ -168,6 +168,4 @@ Recommendation Count: The Guidance generates five personalized recommendations f
 Email Customization: The Guidance provides a basic email template using Amazon Bedrock. Customers can enhance the email template design, content, and personalization features to align with their branding and marketing strategies. Additionally, they can integrate the email generation process with their existing email marketing systems or communication channels.
 
 Scalability: The Guidance is designed to handle a specific number of customers and interactions. Customers can scale the solution by adjusting the AWS resource configurations (e.g., Amazon DynamoDB capacity, Amazon Personalize instance types) to accommodate larger datasets and higher traffic volumes.
-
-
 
