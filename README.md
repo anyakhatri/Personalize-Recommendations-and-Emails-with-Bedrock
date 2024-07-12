@@ -36,10 +36,10 @@ You are responsible for the cost of the AWS services used while running this Gui
 
 
 
-AWS Service | Dimension| Cost[USD] | 
---- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
-Seconds | 301 | 283 | 290 | 286 | 
-
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
 
 
 **Prerequisites**
