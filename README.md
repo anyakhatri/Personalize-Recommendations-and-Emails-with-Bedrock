@@ -29,12 +29,12 @@ By delivering personalized recommendations and tailored communications, customer
 <img width="877" alt="Screenshot 2024-07-09 at 11 01 09 AM" src="https://github.com/anyakhatri/Personalize-Recommendations-and-Emails-with-Bedrock/assets/88737540/5725b3a3-e227-43f5-a0d1-8bc38e806339">
 
 
-## Cost
+### Cost
 You are responsible for the cost of the AWS services used while running this Guidance. As of  , the cost for running this Guidance with the default settings in the US West (Orgeon) is approximately $<n.nn> per month for processing (  records ).
 
 
 
-## Sample Cost Table
+### Sample Cost Table
 When estimating the cost for this architecture, we are working with 1500 customers and generating 5 recommendations per user.
 
 | AWS Service | Dimension | Cost [USD] |
@@ -58,7 +58,7 @@ Before running the notebooks, ensure that you have the following:
 3. Python and necessary libraries installed (e.g., boto3, pandas)
 
 
-## Deployment Steps
+### Deployment Steps
 
 1. Deploy the CloudFormation Stack:
    - Use the AWS Management Console, AWS CLI, or AWS CloudFormation APIs to create a new CloudFormation stack based on the template created in step 1
@@ -84,7 +84,9 @@ Before running the notebooks, ensure that you have the following:
    
    (4) Cleanup
 
-## Deployment Validation
+### Deployment Validation
+
+
 # Running the Guidance
 
 ### 1. Data Preparation
