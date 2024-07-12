@@ -34,11 +34,17 @@ You are responsible for the cost of the AWS services used while running this Gui
 
 
 
-
-
 | AWS Service | Dimension | Cost [USD] |
 | --- | --- | --- |
 | Amazon Personalize Training Hours | 300 training hours x $0.24 USD | $72.00 |
+| Amazon Personalize Data Storage | 100 GB x $0.05 USD | $5.00 |
+| Amazon Personalize Real Time Inferencing | 24 hours x 30 days x 9 TPS = 6480<br>6480 x $0.20 USD | $1296.00 |
+| Amazon Comprehend | 15,000 requests x 6 units per request<br>90,000 x 0.0005 | $45.00 |
+| DynamoDB | Write Cost = $150.04<br>$150.04 + $26.14 | $176.18 |
+| Amazon SNS | Monthly Cost + 11,300 emails x 0.00002 USD | $23.76 |
+| Amazon S3 Storage | 100 GB x $0.023 USD | $2.30 |
+| Amazon Sagemaker | 300 training hours x $2.17 USD | $651.00 |
+| Total | | $2,271.24 |
 
 
 **Prerequisites**
