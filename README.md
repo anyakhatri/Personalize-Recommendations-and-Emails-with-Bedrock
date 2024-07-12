@@ -87,6 +87,17 @@ Before running the notebooks, ensure that you have the following:
 ### Deployment Validation
 
 
+Deployment Validation:
+
+1. Open the AWS CloudFormation console and navigate to the stack you just created. Verify the status of the stack by checking the "Status" column. If the deployment is successful, the status should be "CREATE_COMPLETE".
+
+2. Verify the creation of the following resources:
+   - Amazon S3 Bucket: Open the Amazon S3 console and check if the bucket with the name you provided in the BucketName parameter is created.
+   - IAM Roles: Open the IAM console and check if the roles SageMakerIamRole and PersonalizeIamRole are created.
+   - Amazon SageMaker Notebook Instance: Open the Amazon SageMaker console and check if the notebook instance with the name you provided in the NotebookName parameter is created and has the status "InService".
+
+If all the above steps are successful, it indicates that the deployment of the CloudFormation template is successful, and the required resources are created correctly.
+
 # Running the Guidance
 
 ### 1. Data Preparation
