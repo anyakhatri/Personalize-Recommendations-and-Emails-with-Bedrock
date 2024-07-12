@@ -30,24 +30,26 @@ By delivering personalized recommendations and tailored communications, customer
 
 
 ## Cost
-You are responsible for the cost of the AWS services used while running this Guidance. As of  , the cost for running this Guidance with the default settings in the <Default AWS Region (Most likely will be US East (N. Virginia)) > is approximately $<n.nn> per month for processing (  records ).
+You are responsible for the cost of the AWS services used while running this Guidance. As of  , the cost for running this Guidance with the default settings in the US West (Orgeon) is approximately $<n.nn> per month for processing (  records ).
 
 
+
+## Sample Cost Table
+When estimating the cost for this architecture, we are working with 1500 customers and generating 5 recommendations per user.
 
 | AWS Service | Dimension | Cost [USD] |
 | --- | --- | --- |
 | Amazon Personalize Training Hours | 300 training hours x $0.24 USD | $72.00 |
-| Amazon Personalize Data Storage | 100 GB x $0.05 USD | $5.00 |
 | Amazon Personalize Real Time Inferencing | 24 hours x 30 days x 9 TPS = 6480<br>6480 x $0.20 USD | $1296.00 |
-| Amazon Comprehend | 15,000 requests x 6 units per request<br>90,000 x 0.0005 | $45.00 |
-| DynamoDB | Write Cost = $150.04<br>$150.04 + $26.14 | $176.18 |
-| Amazon SNS | Monthly Cost + 11,300 emails x 0.00002 USD | $23.76 |
-| Amazon S3 Storage | 100 GB x $0.023 USD | $2.30 |
+| Amazon Comprehend | 1500 active dataset rows x 6 units per request<br>90,000 x 0.0005 | $45.00 |
+| Amazon DynamoDB | Write Cost = $150.04<br>$150.04 + $26.14 | $176.18 |
+| Amazon SNS | Monthly Cost + 1500 x 0.00002 USD | |
+| Amazon S3 Storage | 1 GB x $0.023 USD | $2.30 |
 | Amazon Sagemaker | 300 training hours x $2.17 USD | $651.00 |
-| Total | | $2,271.24 |
+| Total | |  |
 
 
-**Prerequisites**
+# Prerequisites
 
 Before running the notebooks, ensure that you have the following:
 
@@ -56,21 +58,23 @@ Before running the notebooks, ensure that you have the following:
 3. Python and necessary libraries installed (e.g., boto3, pandas)
 
 
-# Deployment
+## Deployment Steps
 
 1. Deploy the CloudFormation Stack:
    - Use the AWS Management Console, AWS CLI, or AWS CloudFormation APIs to create a new CloudFormation stack based on the template created in step 1
    - Provide the required parameters, such as the S3 bucket name, notebook instance configuration, and any other necessary inputs.
-     
 2. Clone the Repository:
    - Clone the repository containing the notebooks and necessary code for the workflow.
    - This repository should include the data preprocessing, sentiment analysis, personalization, and email template integration scripts.
+  
+3. Upload amazon.csv to the S3 Bucket
+   - Navigate to the S3 bucket created from the CloudFormation Stack and upload amazon.csv to the bucket.
 
-3. Open the SageMaker Notebook Instance:
+4. Open the SageMaker Notebook Instance:
    - Launch the SageMaker notebook instance provisioned by the CloudFormation stack.
    - Upload the 4 notebooks in the same instance
 
-4. Run the Notebooks in Order
+5. Run the Notebooks in Order
 
    (1) Dataset filtering
    
@@ -80,8 +84,8 @@ Before running the notebooks, ensure that you have the following:
    
    (4) Cleanup
 
-
-# Notebooks
+## Deployment Validation
+# Running the Guidance
 
 ### 1. Data Preparation
 
