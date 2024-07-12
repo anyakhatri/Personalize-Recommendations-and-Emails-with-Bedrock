@@ -36,9 +36,9 @@ You are responsible for the cost of the AWS services used while running this Gui
 
 
 
-| First Header  | Second Header |
+| AWS Service  | Dimension | Cost [USD] |
 | ------------- | ------------- |
-| Content Cell  | Content Cell  |
+| Amazon Personalize Training Hours  | 300 training hours x $0.24 USD | $72.00 |
 | Content Cell  | Content Cell  |
 
 
