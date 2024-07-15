@@ -169,3 +169,7 @@ Email Customization: The Guidance provides a basic email template using Amazon B
 
 Scalability: The Guidance is designed to handle a specific number of customers and interactions. Customers can scale the solution by adjusting the AWS resource configurations (e.g., Amazon DynamoDB capacity, Amazon Personalize instance types) to accommodate larger datasets and higher traffic volumes.
 
+
+## Notices
+
+Customers are responsible for making their own independent assessment of the information in this Guidance. This Guidance: (a) is for informational purposes only, (b) represents AWS current product offerings and practices, which are subject to change without notice, and (c) does not create any commitments or assurances from AWS and its affiliates, suppliers or licensors. AWS products or services are provided “as is” without warranties, representations, or conditions of any kind, whether express or implied. AWS responsibilities and liabilities to its customers are controlled by AWS agreements, and this Guidance is not part of, nor does it modify, any agreement between AWS and its customers.
