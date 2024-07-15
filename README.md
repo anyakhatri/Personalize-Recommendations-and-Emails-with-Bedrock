@@ -66,7 +66,7 @@ Before running the notebooks, ensure that you have the following:
      
 ```bash
 aws cloudformation create-stack --stack-name <stack-name> --template-body file:///<path-to-template>/deployment.yaml --capabilities CAPABILITY_NAMED_IAM
-'''
+```
 
 
 3. Clone the Repository:
