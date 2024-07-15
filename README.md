@@ -83,7 +83,7 @@ git clone https://github.com/anyakhatri/Personalize-Recommendations-and-Emails-w
 ```
 
 4. Upload amazon.csv to the S3 Bucket
-   - Navigate to the S3 bucket created from the CloudFormation Stack and upload amazon.csv to the bucket.
+   - Navigate to the S3 bucket created from the CloudFormation Stack and upload deployment/amazon.csv to the bucket.
 
 5. Open the SageMaker Notebook Instance:
    - Launch the SageMaker notebook instance provisioned by the CloudFormation stack.
