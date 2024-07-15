@@ -49,10 +49,9 @@ When estimating the cost for this architecture, we are working with 1500 custome
 | Amazon Personalize Real Time Inferencing | 24 hours x 30 days x 9 TPS = 6480<br>6480 x $0.20 USD | $1296.00 |
 | Amazon Comprehend | 1500 active dataset rows x 6 units per request<br>90,000 x 0.0005 | $45.00 |
 | Amazon DynamoDB | Write Cost = $150.04<br>$150.04 + $26.14 | $176.18 |
-| Amazon SNS | Monthly Cost + 1500 x 0.00002 USD | |
 | Amazon S3 Storage | 1 GB x $0.023 USD | $2.30 |
 | Amazon Sagemaker | 300 training hours x $2.17 USD | $651.00 |
-| Total | |  |
+| Total | | 2,066.30 |
 
 
 ## Prerequisites
