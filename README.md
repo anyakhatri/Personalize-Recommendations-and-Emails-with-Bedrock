@@ -17,9 +17,9 @@
 
 The primary intent for this solution is to deliver a personalized and engaging experience to customers, ultimately leading to increased customer satisfaction, loyalty, and revenue growth for the business. Customers expect seamless and tailored experiences that directly address their unique preferences and needs and achieving that level of personalization can be a challenge for businesses with large customer bases and catalogs.
 
-The workflow begins by ingesting data from Amazon S3, including product catalogs, customer information, and user interactions such as reviews on products. This data is then processed to extract relevant information about products and users and stored back to Amazon S3. Sentiment analysis using Amazon Comprehend is performed on user interactions, particularly product reviews, to gauge customers' preferences, opinions, and sentiments towards specific products or features. The extracted product and user data, along with the interaction data, are stored in Amazon DynamoDB for efficient data management and retrieval.
+The workflow begins by ingesting data from Amazon S3, including product catalogs, customer information, and user interactions such as reviews on products. This data is then processed to extract relevant information about products and users and stored back to Amazon S3. Sentiment analysis using Amazon Comprehend is performed on user interactions, particularly product reviews, to gauge customers' preferences, opinions, and sentiments towards specific products or features. The extracted product and user data, along with the interaction data, are stored in Amazon DynamoDB tables.
 
-Amazon Personalize, a machine learning service, plays a crucial role in generating personalized product recommendations for each customer. It leverages the stored data, including user preferences and entiment analysis results, to create tailored recommendations for each user. These personalized recommendations are then integrated into email templates using Amazon Bedrock Claude which ensures that each customer receives a dynamic and personalized email content tailored to their specific interests and needs.
+Amazon Personalize, a machine learning service, plays a crucial role in generating personalized product recommendations for each customer. It leverages the stored data, including user preferences and sentiment analysis results, to create tailored recommendations for each user. These personalized recommendations are then integrated into email templates using Amazon Bedrock Claude which ensures that each customer receives personalized email content tailored to their specific interests and needs.
 
 By delivering personalized recommendations and tailored communications, customers feel valued and understood, leading to increased satisfaction and loyalty. This personalized approach sets the business apart from competitors and creates a memorable and positive brand experience. Moreover, personalization has been proven to significantly impact conversion rates. By presenting customers with products and offers that align with their preferences, the likelihood of making a purchase increases, driving revenue growth for the business.
 
@@ -30,7 +30,7 @@ By delivering personalized recommendations and tailored communications, customer
 
 
 ### Cost
-You are responsible for the cost of the AWS services used while running this Guidance. As of  , the cost for running this Guidance with the default settings in the US West (Orgeon) is approximately $<n.nn> per month for processing (  records ).
+You are responsible for the cost of the AWS services used while running this Guidance. As of  , the cost for running this Guidance with the default settings in the US West (Oregon) is approximately $<n.nn> per month for processing (  records ).
 
 
 
@@ -139,13 +139,13 @@ Explanation:
 
 Steps:
 
-1. Install and import necessary libraries (e.g., AWS Bedrock, Jinja2)
+1. Install and import necessary libraries (e.g., AWS Bedrock)
 2. Populate the template with personalized recommendations and user data
 3. Generate the email content for each user
 
 
 
-### 4. Resource Cleanup (#resource-cleanup)
+### 4. Resource Cleanup 
 This notebook provides instructions on how to clean up the resources created during the previous steps, such as deleting the DynamoDB tables, Amazon S3 buckets, and Amazon Personalize resources.
 
 Steps:
@@ -157,7 +157,7 @@ Steps:
 
 ## Next Steps
 
-Here are some suggestions and recommendations for customers to further enhance this Guidance according to their requirements:
+Here are some suggestions and recommendations for customers to further enhance this Guidance:
 
 Data Source: The current implementation uses a sample Amazon product dataset. Customers can replace this with their own product catalog, customer data, and interaction data to generate personalized recommendations tailored to their business and customer base.
 
