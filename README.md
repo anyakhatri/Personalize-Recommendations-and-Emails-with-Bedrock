@@ -66,11 +66,17 @@ Before running the notebooks, ensure that you have the following:
      
 ```bash
 aws cloudformation create-stack --stack-name <stack-name> --template-body file:///<path-to-template>/deployment.yaml --capabilities CAPABILITY_NAMED_IAM
+'''
+
 
 3. Clone the Repository:
    - Clone the repository containing the notebooks and necessary code for the workflow.
    - This repository should include the data preprocessing, sentiment analysis, personalization, and email template integration scripts.
-  
+
+'''bash
+git clone https://github.com/anyakhatri/Personalize-Recommendations-and-Emails-with-Bedrock.git
+'''
+
 4. Upload amazon.csv to the S3 Bucket
    - Navigate to the S3 bucket created from the CloudFormation Stack and upload amazon.csv to the bucket.
 
