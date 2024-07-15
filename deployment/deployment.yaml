@@ -4,7 +4,7 @@ Description: Creates an S3 Bucket, IAM Roles & Policy, and SageMaker Notebook to
 Parameters:
   BucketName:
     Type: String
-    Default: personalizeproductreviewdat
+    Default: personalizeproductreviewdata
     Description: The name of the S3 Bucket to create, use only lowercase characters and numbers, no special characters or spaces. Make sure to change it to a unique value.
 
   NotebookName:
