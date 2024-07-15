@@ -19,7 +19,7 @@ The primary intent for this solution is to deliver a personalized and engaging e
 
 The workflow begins by ingesting data from Amazon S3, including product catalogs, customer information, and user interactions such as reviews on products. This data is then processed to extract relevant information about products and users and stored back to Amazon S3. Sentiment analysis using Amazon Comprehend is performed on user interactions, particularly product reviews, to gauge customers' preferences, opinions, and sentiments towards specific products or features. The extracted product and user data, along with the interaction data, are stored in Amazon DynamoDB tables.
 
-Amazon Personalize, a machine learning service, plays a crucial role in generating personalized product recommendations for each customer. It leverages the stored data, including user preferences and sentiment analysis results, to create tailored recommendations for each user. These personalized recommendations are then integrated into email templates using Amazon Bedrock Claude which ensures that each customer receives personalized email content tailored to their specific interests and needs.
+Amazon Personalize plays a crucial role in generating personalized product recommendations for each customer. It leverages the stored data, including user preferences and sentiment analysis results, to create tailored recommendations for each user. These personalized recommendations are then integrated into email templates using Amazon Bedrock Claude which ensures that each customer receives personalized email content tailored to their specific interests and needs.
 
 By delivering personalized recommendations and tailored communications, customers feel valued and understood, leading to increased satisfaction and loyalty. This personalized approach sets the business apart from competitors and creates a memorable and positive brand experience. Moreover, personalization has been proven to significantly impact conversion rates. By presenting customers with products and offers that align with their preferences, the likelihood of making a purchase increases, driving revenue growth for the business.
 
@@ -30,7 +30,7 @@ By delivering personalized recommendations and tailored communications, customer
 
 
 ### Cost
-You are responsible for the cost of the AWS services used while running this Guidance. As of  , the cost for running this Guidance with the default settings in the US West (Oregon) is approximately $<n.nn> per month for processing (  records ).
+You are responsible for the cost of the AWS services used while running this Guidance. As of 7/15/24, the cost for running this Guidance with the default settings in the US West (Oregon) is approximately $<n.nn> per month for processing (  records ).
 
 
 
@@ -61,20 +61,24 @@ Before running the notebooks, ensure that you have the following:
 ## Deployment Steps
 
 1. Deploy the CloudFormation Stack:
-   - Use the AWS Management Console, AWS CLI, or AWS CloudFormation APIs to create a new CloudFormation stack based on the template created in step 1
+   - Use the AWS CLI to create a new CloudFormation stack based on the template created in step 1
    - Provide the required parameters, such as the S3 bucket name, notebook instance configuration, and any other necessary inputs.
-2. Clone the Repository:
+     
+```bash
+aws cloudformation create-stack --stack-name <stack-name> --template-body file:///<path-to-template>/deployment.yaml --capabilities CAPABILITY_NAMED_IAM
+
+3. Clone the Repository:
    - Clone the repository containing the notebooks and necessary code for the workflow.
    - This repository should include the data preprocessing, sentiment analysis, personalization, and email template integration scripts.
   
-3. Upload amazon.csv to the S3 Bucket
+4. Upload amazon.csv to the S3 Bucket
    - Navigate to the S3 bucket created from the CloudFormation Stack and upload amazon.csv to the bucket.
 
-4. Open the SageMaker Notebook Instance:
+5. Open the SageMaker Notebook Instance:
    - Launch the SageMaker notebook instance provisioned by the CloudFormation stack.
    - Upload the 4 notebooks in the same instance
 
-5. Run the Notebooks in Order
+6. Run the Notebooks in Order
 
    (1) Dataset filtering, (2) Personalization, (3) Bedrock Implementation, (4) Cleanup
 
