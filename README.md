@@ -71,7 +71,7 @@ Before running the notebooks, ensure that you have the following:
    - Provide the required parameters, such as the S3 bucket name, notebook instance configuration, and any other necessary inputs.
      
 ```bash
-aws cloudformation create-stack --stack-name <stack-name> --template-body file:///<path-to-template>/deployment.yaml --capabilities CAPABILITY_NAMED_IAM
+aws cloudformation create-stack --stack-name <personalizerecommendations> --template-body file:///<path-to-template>/deployment.yaml --capabilities CAPABILITY_NAMED_IAM
 ```
 
 
@@ -162,13 +162,12 @@ Steps:
 
 
 ### 4. Resource Cleanup 
-This notebook provides instructions on how to clean up the resources created during the previous steps, such as deleting the DynamoDB tables, Amazon S3 buckets, and Amazon Personalize resources.
 
-Steps:
+Run the resource notebook cleanup(4) to clean up all associated resources included in the Jupyter notebooks. To delete the stack, run the following command in the AWS CLI
 
-1. Delete the DynamoDB tables used for storing product and user data
-2. Delete the Amazon S3 bucket used for storing the interaction dataset
-3. Delete the Amazon Personalize dataset group, solution, and other related resources
+```bash
+aws cloudformation delete-stack --stack-name personalizerecommendations
+```
 
 
 ## Next Steps
