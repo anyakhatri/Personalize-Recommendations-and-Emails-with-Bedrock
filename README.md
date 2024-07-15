@@ -74,8 +74,8 @@ aws cloudformation create-stack --stack-name <personalizerecommendations> --temp
 ```
 
 
-3. Clone the Repository:
-   - Clone the repository containing the notebooks and necessary code for the workflow.
+3. Clone the Repository or Download .zip file to local:
+   - Clone the repository or locally download it with the notebooks and necessary code for the workflow.
    - This repository should include the data preprocessing, sentiment analysis, personalization, and email template integration scripts.
 
 ```bash
