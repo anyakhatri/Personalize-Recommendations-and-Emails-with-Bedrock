@@ -84,12 +84,17 @@ git clone https://github.com/anyakhatri/Personalize-Recommendations-and-Emails-w
 
 4. Upload amazon.csv to the S3 Bucket
    - Navigate to the S3 bucket created from the CloudFormation Stack and upload deployment/amazon.csv to the bucket.
+  
+5. Before you can use any Bedrock Models, you need to request model access through the AWS Console in a region where Bedrock is available: Switch to the region where you want to run Bedrock, go to ”Model access“, click “Edit”, and activate "Claude 3 Sonnet".
+Then, click “Save changes”.
 
-5. Open the SageMaker Notebook Instance:
+<img width="523" alt="Screenshot 2024-07-16 at 12 33 26 PM" src="https://github.com/user-attachments/assets/51e833f2-959a-4de1-83cf-9ed3ae3fcea3">
+
+6. Open the SageMaker Notebook Instance:
    - Launch the SageMaker notebook instance provisioned by the CloudFormation stack and click open with Jupyter or JupyterLab
    - Upload the 4 notebooks in the same instance
 
-6. Run the Notebooks in Order
+7. Run the Notebooks in Order
 
    (1) Dataset filtering, (2) Personalization, (3) Bedrock Implementation, (4) Cleanup
 
