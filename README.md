@@ -86,7 +86,7 @@ git clone https://github.com/anyakhatri/Personalize-Recommendations-and-Emails-w
    - Navigate to the S3 bucket created from the CloudFormation Stack and upload deployment/amazon.csv to the bucket.
 
 5. Open the SageMaker Notebook Instance:
-   - Launch the SageMaker notebook instance provisioned by the CloudFormation stack.
+   - Launch the SageMaker notebook instance provisioned by the CloudFormation stack and click open with Jupyter or JupyterLab
    - Upload the 4 notebooks in the same instance
 
 6. Run the Notebooks in Order
@@ -97,10 +97,19 @@ git clone https://github.com/anyakhatri/Personalize-Recommendations-and-Emails-w
 
 1. Open the AWS CloudFormation console and navigate to the stack you just created. Verify the status of the stack by checking the "Status" column. If the deployment is successful, the status should be "CREATE_COMPLETE".
 
+<img width="1228" alt="Screenshot 2024-07-16 at 9 44 40 AM" src="https://github.com/user-attachments/assets/f7847810-2367-435b-b537-f5968bbc0dad">
+
 2. Verify the creation of the following resources:
-   - Amazon S3 Bucket: Open the Amazon S3 console and check if the bucket with the name you provided in the BucketName parameter is created.
+   - Amazon S3 Bucket: Open the Amazon S3 console and check if the bucket with the name you provided in the BucketName parameter is created
+   
+  ```bash
+   aws s3 ls s3://personalizeproductreviewdata
+ ```
    - IAM Roles: Open the IAM console and check if the roles SageMakerIamRole and PersonalizeIamRole are created.
    - Amazon SageMaker Notebook Instance: Open the Amazon SageMaker console and check if the notebook instance with the name you provided in the NotebookName parameter is created and has the status "InService".
+  
+     <img width="1132" alt="Screenshot 2024-07-16 at 9 45 23 AM" src="https://github.com/user-attachments/assets/f0d09671-5222-48c0-b11c-6c070d368796">
+
 
 If all the above steps are successful, it indicates that the deployment of the CloudFormation template is successful, and the required resources are created correctly.
 
