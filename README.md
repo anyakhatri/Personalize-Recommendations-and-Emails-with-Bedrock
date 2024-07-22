@@ -117,8 +117,11 @@ https://github.com/user-attachments/assets/73395b86-90d7-4459-975b-2c842e5a957b
 
 Repeat this process for all notebooks in the following order: 
 **(1) Dataset filtering**
+
 **(2) Personalization**
+
 **(3) Bedrock Implementation**
+
 **(4) Cleanup**
 
 
