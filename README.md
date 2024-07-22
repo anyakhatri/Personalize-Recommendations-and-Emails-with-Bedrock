@@ -64,8 +64,8 @@ Before running the notebooks, ensure that you have the following:
 
 ## Deployment Steps
 
-1. Deploy the CloudFormation Stack:
-   - Use the AWS CLI to create a new CloudFormation stack based on the template created in step 1
+1. Deploy the CloudFormation Stack: 
+   - Use the AWS CLI to create a new CloudFormation stack based on this CloudFormation template, also found in deployment/deployment.yaml
    - Provide the required parameters, such as the S3 bucket name, notebook instance configuration, and any other necessary inputs.
      
 ```bash
