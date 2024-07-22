@@ -64,22 +64,30 @@ Before running the notebooks, ensure that you have the following:
 
 ## Deployment Steps
 
-1. Deploy the CloudFormation Stack: 
-   - Use the AWS CLI to create a new CloudFormation stack based on this [CloudFormation template](https://github.com/anyakhatri/Personalize-Recommendations-and-Emails-with-Bedrock/blob/main/deployment/deployment.yaml), also found in deployment/deployment.yaml
-   - Provide the required parameters, such as the S3 bucket name, notebook instance configuration, and any other necessary inputs.
-     
-```bash
-aws cloudformation create-stack --stack-name <personalizerecommendations> --template-body file:///<path-to-template>/deployment.yaml --capabilities CAPABILITY_NAMED_IAM
-```
 
 
-2. Clone the Repository or Download .zip file to local:
+1. Clone the Repository or Download .zip file to local:
    - Clone the repository or locally download it with the notebooks and necessary code for the workflow.
    - This repository should include the data preprocessing, sentiment analysis, personalization, and email template integration scripts.
 
 ```bash
 git clone https://github.com/anyakhatri/Personalize-Recommendations-and-Emails-with-Bedrock.git
 ```
+   - Alternatively, if you prefer not to use Git, you can download the repository as a ZIP file by following these steps:
+     - Open the GitHub repository URL in your web browser: https://github.com/anyakhatri/Personalize-Recommendations-and-Emails-with-Bedrock
+     - Click on the green "Code" button
+     - In the the dropdown menu, select "Download ZIP". Once the ZIP file is downloaded, extract it to a directory of your choice on your local machine.
+
+
+
+
+2. Deploy the CloudFormation Stack: 
+   - Use the AWS Console to navigate to the CloudFormation console. [CloudFormation template](https://github.com/anyakhatri/Personalize-Recommendations-and-Emails-with-Bedrock/blob/main/deployment/deployment.yaml), also found in deployment/deployment.yaml and follow the steps demonstrated below.
+     
+
+https://github.com/user-attachments/assets/7fa040b9-204e-41b6-92bc-ed6eaf2234c1
+
+
 
 3. Upload amazon.csv to the S3 Bucket
    - Navigate to the S3 bucket created from the CloudFormation Stack and upload deployment/amazon.csv to the bucket.
