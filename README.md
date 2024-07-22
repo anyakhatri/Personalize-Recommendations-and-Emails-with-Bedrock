@@ -116,6 +116,7 @@ https://github.com/user-attachments/assets/73395b86-90d7-4459-975b-2c842e5a957b
 <img width="1048" alt="Screenshot 2024-07-22 at 2 54 31 PM" src="https://github.com/user-attachments/assets/2a77ec0a-2020-4284-85a1-ca3e5826b761">
 
 Repeat this process for all notebooks in the following order: 
+
 **(1) Dataset filtering**
 
 **(2) Personalization**
