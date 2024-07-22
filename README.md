@@ -103,10 +103,24 @@ https://github.com/user-attachments/assets/74dfc9c9-a122-4f72-9e56-c562d1d55d94
 5. Open the SageMaker Notebook Instance:
    - Launch the SageMaker notebook instance provisioned by the CloudFormation stack and click open with Jupyter or JupyterLab
    - Upload the 4 notebooks in the same instance
+  
+     
 
-6. Run the Notebooks in Order
+https://github.com/user-attachments/assets/73395b86-90d7-4459-975b-2c842e5a957b
 
-   (1) Dataset filtering, (2) Personalization, (3) Bedrock Implementation, (4) Cleanup
+
+
+6. Run all the notebooks
+  - Once the notebook is open, you will see a series of cells containing code or text. To run all cells in the notebook,click on the "Cell" menu at the top, and then select "Run All" from the dropdown menu. You can monitor the progress of the execution by watching the output of each cell. Jupyter will indicate when a cell is currently running by displaying [*] next to the cell. Once all cells have been executed, you will see the final output of the last cell, and the notebook will be marked as "Idle" in the top-right corner.
+
+<img width="1048" alt="Screenshot 2024-07-22 at 2 54 31 PM" src="https://github.com/user-attachments/assets/2a77ec0a-2020-4284-85a1-ca3e5826b761">
+
+Repeat this process for all notebooks in the following order: 
+## (1) Dataset filtering
+## (2) Personalization
+## (3) Bedrock Implementation
+## (4) Cleanup
+
 
 ## Deployment Validation
 
