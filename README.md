@@ -90,8 +90,12 @@ https://github.com/user-attachments/assets/7fa040b9-204e-41b6-92bc-ed6eaf2234c1
 
 
 3. Upload amazon.csv to the S3 Bucket
-   - Navigate to the S3 bucket created from the CloudFormation Stack and upload deployment/amazon.csv to the bucket.
+   - Navigate to the S3 bucket created from the CloudFormation Stack and upload deployment/amazon.csv to the bucket. Follow the steps demonstrated below.
   
+  
+https://github.com/user-attachments/assets/74dfc9c9-a122-4f72-9e56-c562d1d55d94
+
+
 4. Before you can use any Bedrock Models, you need to request model access through the AWS Console in a region where Bedrock is available. Switch to the region where you want to run Bedrock and follow documentation found here https://docs.aws.amazon.com/bedrock/latest/userguide/model-access.html.  Activate "Claude 3 Sonnet". Then, click "Save changes".
 
 <img width="523" alt="Screenshot 2024-07-16 at 12 33 26 PM" src="https://github.com/user-attachments/assets/51e833f2-959a-4de1-83cf-9ed3ae3fcea3">
