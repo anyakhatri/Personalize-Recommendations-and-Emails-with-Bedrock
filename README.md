@@ -36,8 +36,7 @@ By delivering personalized recommendations and tailored communications, customer
 
 
 ### Cost
-You are responsible for the cost of the AWS services used while running this Guidance. As of 7/15/24, the cost for running this Guidance with the default settings in the US West (Oregon) is approximately $<n.nn> per month for processing (  records ).
-
+You are responsible for the cost of the AWS services used while running this Guidance. As of 7/15/24, the cost for running this Guidance with the default settings in the US West (Oregon) is approximately $2,066.30 per month based on the following assumptions.
 
 
 ### Sample Cost Table
