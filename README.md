@@ -1,4 +1,4 @@
-# Personalized Product Recommendation System
+# Guidance for Enhancing Personalized Recommendation Systems with Amazon Bedrock
 
 
 ## Table of Contents
