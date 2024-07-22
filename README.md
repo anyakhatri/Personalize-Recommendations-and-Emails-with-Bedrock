@@ -178,7 +178,7 @@ Steps:
 Run the resource notebook cleanup(4) to clean up all associated resources included in the Jupyter notebooks. To delete the stack, run the following command in the AWS CLI
 
 ```bash
-aws cloudformation delete-stack --stack-name personalizerecommendations
+aws cloudformation delete-stack --stack-name recommendations
 ```
 
 
