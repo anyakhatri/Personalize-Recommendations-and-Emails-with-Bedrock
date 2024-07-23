@@ -130,10 +130,6 @@ Resources:
             Resource:
               - !Sub "arn:aws:s3:::elementalrodeo99-us-west-1/aim312"
               - !Sub "arn:aws:s3:::elementalrodeo99-us-west-1/aim312/*"
-          - Effect: Allow
-            Action:
-              - "bedrock:*"
-            Resource: !Sub "arn:aws:bedrock:${AWS::Region}:${AWS::AccountId}:resources/*"
       Roles:
         - !Ref SageMakerIamRole
         - !Ref PersonalizeIamRole
