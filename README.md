@@ -154,7 +154,7 @@ This notebook takes an Amazon product dataset (amazon.csv) and filters it to ext
 
 Explanation:
 
-- ***DynamoDB***: A fully managed NoSQL database service provided by AWS. It is used to store the product and user data for efficient retrieval.
+- ***DynamoDB***: A fully managed NoSQL database service known for its low-latency performance and scalability. It is used to store the product and user data for efficient retrieval.
 - ***Amazon S3***: A highly scalable and durable object storage service. It is used to store the interaction dataset for later use.
 
 Steps:
@@ -191,8 +191,8 @@ This notebook generates an email template using Amazon Bedrock, populating it wi
 
 Explanation:
 
-- ***Amazon Bedrock***: An open-source project that provides a comprehensive framework for building and deploying modern applications on AWS.
-- ***Email Generation***: AWS Bedrock can be used to generate personalized emails by leveraging Claude for template and data manipulation capabilities.
+- ***Amazon Bedrock***: Amazon Bedrock is a fully managed service that offers a choice of high-performing foundation models (FMs
+- ***Email Generation***: Amazon Bedrock can be used to generate personalized emails by leveraging Claude for template and data manipulation capabilities.
 
 Steps:
 
