@@ -219,13 +219,11 @@ aws cloudformation delete-stack --stack-name recommendations
 
 ## Next Steps
 
-Here are some suggestions and recommendations for customers to further enhance this Guidance:
+Here are some suggestions next steps customers can take with this guidance:
 
 Data Source: The current implementation uses a sample Amazon product dataset. Customers can replace this with their own product catalog, customer data, and interaction data to generate personalized recommendations tailored to their business and customer base.
 
 Personalization Recipe: The Guidance currently uses the USER_PERSONALIZATION recipe, but customers can explore other available recipes in Amazon Personalize depending on their use case and data characteristics.
-
-Recommendation Count: The Guidance generates five personalized recommendations for each user. Customers can modify this number based on their requirements and the desired level of personalization.
 
 Email Customization: The Guidance provides a basic email template using Amazon Bedrock. Customers can enhance the email template design, content, and personalization features to align with their branding and marketing strategies. Additionally, they can integrate the email generation process with their existing email marketing systems or communication channels.
 
