@@ -237,4 +237,4 @@ _Customers are responsible for making their own independent assessment of the in
 
 ## Citations
 
-The dataset is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License found [here]https://www.kaggle.com/datasets/karkavelrajaj/amazon-sales-dataset
+The dataset is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License found [here](https://www.kaggle.com/datasets/karkavelrajaj/amazon-sales-dataset)
