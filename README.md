@@ -66,7 +66,7 @@ Before running the notebooks, ensure that you have the following:
 
 
 
-1. Clone the Repository or Download .zip file to local:
+**1. Clone the Repository or Download .zip file to local:**
    - Clone the repository or locally download it with the notebooks and necessary code for the workflow.
    - This repository should include the data preprocessing, sentiment analysis, personalization, and email template integration scripts.
 
@@ -81,7 +81,7 @@ git clone https://github.com/anyakhatri/Personalize-Recommendations-and-Emails-w
 
 
 
-2. Deploy the CloudFormation Stack: 
+**2. Deploy the CloudFormation Stack:**
    - Use the AWS Console to navigate to the CloudFormation console. [CloudFormation template](https://github.com/anyakhatri/Personalize-Recommendations-and-Emails-with-Bedrock/blob/main/deployment/deployment.yaml), also found in deployment/deployment.yaml and follow the steps demonstrated below.
      
 
@@ -89,31 +89,37 @@ https://github.com/user-attachments/assets/7fa040b9-204e-41b6-92bc-ed6eaf2234c1
 
 
 
-3. Upload amazon.csv to the S3 Bucket
+
+**3. Upload amazon.csv to the S3 Bucket**
    - Navigate to the S3 bucket created from the CloudFormation Stack and upload deployment/amazon.csv to the bucket. Follow the steps demonstrated below.
   
   
 https://github.com/user-attachments/assets/74dfc9c9-a122-4f72-9e56-c562d1d55d94
 
 
-4. Before you can use any Bedrock Models, you need to request model access through the AWS Console in a region where Bedrock is available. Switch to the region where you want to run Bedrock and follow documentation found here https://docs.aws.amazon.com/bedrock/latest/userguide/model-access.html.  Activate "Claude 3 Sonnet". Then, click "Save changes".
+
+**4. Choose Bedrock Model**
+  - Before you can use any Bedrock Models, you need to request model access through the AWS Console in a region where Bedrock is available. Switch to the region where you want to run Bedrock and follow documentation found here https://docs.aws.amazon.com/bedrock/latest/userguide/model-access.html.  Activate "Claude 3 Sonnet". Then, click "Save changes".
 
 <img width="523" alt="Screenshot 2024-07-16 at 12 33 26 PM" src="https://github.com/user-attachments/assets/51e833f2-959a-4de1-83cf-9ed3ae3fcea3">
 
-5. Open the SageMaker Notebook Instance:
+
+**5. Open the SageMaker Notebook Instance:**
    - Launch the SageMaker notebook instance provisioned by the CloudFormation stack and click open with Jupyter or JupyterLab
    - Upload the 4 notebooks in the same instance
   
      
-
 https://github.com/user-attachments/assets/73395b86-90d7-4459-975b-2c842e5a957b
 
 
 
-6. Run all the notebooks
+
+**6. Run all the notebooks**
   - Once the notebook is open, you will see a series of cells containing code or text. To run all cells in the notebook,click on the "Cell" menu at the top, and then select "Run All" from the dropdown menu. You can monitor the progress of the execution by watching the output of each cell. Jupyter will indicate when a cell is currently running by displaying [*] next to the cell. Once all cells have been executed, you will see the final output of the last cell, and the notebook will be marked as "Idle" in the top-right corner.
 
 <img width="1048" alt="Screenshot 2024-07-22 at 2 54 31 PM" src="https://github.com/user-attachments/assets/2a77ec0a-2020-4284-85a1-ca3e5826b761">
+
+
 
 Repeat this process for all notebooks in the following order: 
 
