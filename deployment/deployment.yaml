@@ -20,11 +20,6 @@ Parameters:
     ConstraintDescription: Must be an integer between 5 (GB) and 16384 (16 TB).
     Description: Enter the size of the EBS volume in GB.
 
-  KmsKeyId:
-    Type: String
-    Default: YOUR-KMS-KEY-ID
-    Description: The KMS Key ID to use for encrypting the SageMaker notebook instance.
-
 Metadata:
   AWS::CloudFormation::Interface:
     ParameterLabels:
@@ -34,8 +29,6 @@ Metadata:
         default: Amazon SageMaker Notebook Name
       VolumeSize:
         default: Size (in GB) of the Amazon SageMaker Notebook volume
-      KmsKeyId:
-        default: KMS Key ID for SageMaker Notebook Instance
 
 Resources:
   # Amazon S3 Bucket
@@ -43,14 +36,6 @@ Resources:
     Type: AWS::S3::Bucket
     Properties:
       BucketName: !Ref BucketName
-      AccessControl: Private
-      BucketEncryption:
-        ServerSideEncryptionConfiguration:
-          - ServerSideEncryptionByDefault:
-              SSEAlgorithm: AES256
-      LoggingConfiguration:
-        DestinationBucketName: !Sub "${AWS::AccountId}-${AWS::Region}-logs"
-        LogFilePrefix: "s3-logs/"
       Tags:
         - Key: AppManagerCFNStackKey
           Value: !Ref 'AWS::StackId'
@@ -84,7 +69,7 @@ Resources:
                 Action:
                   - "iam:CreateRole"
                   - "iam:AttachRolePolicy"
-                Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/*"
+                Resource: "*"
       Tags:
         - Key: AppManagerCFNStackKey
           Value: !Ref 'AWS::StackId'
@@ -117,19 +102,21 @@ Resources:
         Statement:
           - Effect: Allow
             Action:
-              - "s3:GetObject"
-              - "s3:PutObject"
-              - "s3:DeleteObject"
-              - "s3:ListBucket"
+              - "s3:*"
             Resource:
-              - !Sub "arn:aws:s3:::${S3Bucket}"
-              - !Sub "arn:aws:s3:::${S3Bucket}/*"
+              - !Sub arn:aws:s3:::${S3Bucket}
+              - !Sub arn:aws:s3:::${S3Bucket}/*
           - Effect: Allow
             Action:
-              - "s3:GetObject"
+              - "s3:GetObject*"
             Resource:
-              - !Sub "arn:aws:s3:::elementalrodeo99-us-west-1/aim312"
-              - !Sub "arn:aws:s3:::elementalrodeo99-us-west-1/aim312/*"
+              - !Sub arn:aws:s3:::elementalrodeo99-us-west-1/aim312
+              - !Sub arn:aws:s3:::elementalrodeo99-us-west-1/aim312/*
+          - Effect: Allow
+            Action:
+              - "bedrock:*"
+            Resource:
+              - "*"
       Roles:
         - !Ref SageMakerIamRole
         - !Ref PersonalizeIamRole
@@ -162,7 +149,6 @@ Resources:
       NotebookInstanceName: !Ref NotebookName
       RoleArn: !GetAtt SageMakerIamRole.Arn
       VolumeSizeInGB: !Ref VolumeSize
-      KmsKeyId: !Ref KmsKeyId
 
   # SSM Parameter with the s3 bucket for personalize
   PersonalizeS3Bucket:
@@ -175,7 +161,6 @@ Resources:
       Tags:
         Key: AppManagerCFNStackKey
         Value: !Ref 'AWS::StackId'
-
 
   # SSM Parameter with the IAM Role for personalize
   PersonalizeIAMRole:
