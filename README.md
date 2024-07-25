@@ -32,7 +32,7 @@ By delivering personalized recommendations and tailored communications, customer
 
 ### Architecture
 
-<img width="877" alt="Screenshot 2024-07-09 at 11 01 09 AM" src="https://github.com/anyakhatri/Personalize-Recommendations-and-Emails-with-Bedrock/assets/88737540/5725b3a3-e227-43f5-a0d1-8bc38e806339">
+<img width="909" alt="architecture" src="https://github.com/user-attachments/assets/a73e5f84-133e-4567-b5c8-2539a322e982">
 
 
 ### Cost
