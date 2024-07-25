@@ -36,6 +36,7 @@ Resources:
         - "arn:aws:iam::aws:policy/ComprehendFullAccess"
         - "arn:aws:iam::aws:policy/AmazonBedrockFullAccess"
         - "arn:aws:iam::aws:policy/AmazonS3FullAccess"
+        - "arn:aws:iam::aws:policy/AWSCloudFormationFullAccess"
       Policies:
         - PolicyName: CreateRolePolicy
           PolicyDocument:
@@ -45,6 +46,10 @@ Resources:
                 Action:
                   - "iam:CreateRole"
                   - "iam:AttachRolePolicy"
+                Resource: "*"
+              - Effect: Allow
+                Action:
+                  - "cloudformation:DescribeStacks"
                 Resource: "*"
       Tags:
         - Key: AppManagerCFNStackKey
