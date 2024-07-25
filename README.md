@@ -58,8 +58,6 @@ When estimating the cost for this architecture, we are working with 1500 custome
 Before running the notebooks, ensure that you have the following:
 
 1. AWS account with appropriate permissions
-2. Jupyter Notebook environment set up
-3. Python and necessary libraries installed (e.g., boto3, pandas)
 
 
 ## Deployment Steps
@@ -68,17 +66,11 @@ Before running the notebooks, ensure that you have the following:
 
 **1. Clone the Repository or Download .zip file to local:**
    - Clone the repository or locally download it with the notebooks and necessary code for the workflow.
-   - This repository should include the data preprocessing, sentiment analysis, personalization, and email template integration scripts.
+   - This repository should include the data preprocessing, sentiment analysis, personalization, and email template notebooks.
 
 ```bash
 git clone https://github.com/anyakhatri/Personalize-Recommendations-and-Emails-with-Bedrock.git
 ```
-   - Alternatively, if you prefer not to use Git, you can download the repository as a ZIP file by following these steps:
-     - Open the GitHub repository URL in your web browser: https://github.com/anyakhatri/Personalize-Recommendations-and-Emails-with-Bedrock
-     - Click on the green "Code" button
-     - In the the dropdown menu, select "Download ZIP". Once the ZIP file is downloaded, extract it to a directory of your choice on your local machine.
-
-
 
 
 **2. Deploy the CloudFormation Stack:**
