@@ -67,10 +67,8 @@ Before running the notebooks, ensure that you have the following:
 
 
 
-**1. Clone the Repository or Download .zip file to local:**
-   - Clone the repository or locally download it with the notebooks and necessary code for the workflow.
-   - This repository should include the data preprocessing, sentiment analysis, personalization, and email template notebooks.
-
+**1. Clone the Repository**
+   - Clone the repository with the notebooks and deployment instructions using the command below:
 ```bash
 git clone https://github.com/anyakhatri/Personalize-Recommendations-and-Emails-with-Bedrock.git
 ```
@@ -80,7 +78,6 @@ git clone https://github.com/anyakhatri/Personalize-Recommendations-and-Emails-w
    - Use the AWS Console to navigate to the CloudFormation console. [CloudFormation template](https://github.com/anyakhatri/Personalize-Recommendations-and-Emails-with-Bedrock/blob/main/deployment/deployment.yaml), also found in deployment/deployment.yaml and follow the steps demonstrated below.
      
 
-https://github.com/user-attachments/assets/7fa040b9-204e-41b6-92bc-ed6eaf2234c1
 
 
 
@@ -89,12 +86,11 @@ https://github.com/user-attachments/assets/7fa040b9-204e-41b6-92bc-ed6eaf2234c1
    - Navigate to the S3 bucket created from the CloudFormation Stack and upload deployment/amazon.csv to the bucket. Follow the steps demonstrated below.
   
   
-https://github.com/user-attachments/assets/74dfc9c9-a122-4f72-9e56-c562d1d55d94
 
 
 
 **4. Choose Bedrock Model**
-  - Before you can use any Bedrock Models, you need to request model access through the AWS Console in a region where Bedrock is available. Switch to the region where you want to run Bedrock and follow documentation found [here](https://docs.aws.amazon.com/bedrock/latest/userguide/model-access.html).  Activate "Claude 3 Sonnet". Then, click "Save changes".
+  - Before you can use any Bedrock Models, you need to request model access through the AWS Console in a region where Bedrock is available. Follow documentation found [here](https://docs.aws.amazon.com/bedrock/latest/userguide/model-access.html).  Activate "Claude 3 Sonnet". Then, click "Save changes".
 
 <img width="523" alt="Screenshot 2024-07-16 at 12 33 26 PM" src="https://github.com/user-attachments/assets/51e833f2-959a-4de1-83cf-9ed3ae3fcea3">
 
@@ -107,7 +103,6 @@ https://github.com/user-attachments/assets/74dfc9c9-a122-4f72-9e56-c562d1d55d94
 - Follow the guidance below to upload all 4 notebooks to the instance.
   
      
-
 
 ## Deployment Validation
 
