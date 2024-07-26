@@ -36,7 +36,7 @@ By delivering personalized recommendations and tailored communications, customer
 
 
 ### Cost
-You are responsible for the cost of the AWS services used while running this Guidance. As of 7/15/24, the cost for running this Guidance with the default settings in the US West (Oregon) is approximately $2,066.30 per month based on the following assumptions.
+You are responsible for the cost of the AWS services used while running this Guidance. As of 7/15/24, the cost for running this Guidance with the default settings in the US West (Oregon) is approximately $41.42 based on the following assumptions.
 
 
 ### Sample Cost Table
@@ -45,11 +45,11 @@ When estimating the cost for this architecture, we are working with 1500 custome
 | AWS Service | Dimension | Cost [USD] |
 | --- | --- | --- |
 | Amazon Personalize Ingestion, Training and Inference | ($0.05 x 1 GB) + (5 training hours x $0.24 USD) + (7,500 recommendation requests x 0.000055555) | $1.79 |
-| Amazon Comprehend | (1500 rows * 300 characters)/100 character/unit <br>  4,500 units / 1,000 units * $1.00 | $4.50 |
-| Amazon DynamoDB | Write Cost = $150.04<br>$150.04 + $26.14 | $176.18 |
+| Amazon Comprehend | (1500 rows x 300 characters)/100 character/unit <br>  4,500 units / 1,000 units x $1.00 | $4.50 |
+| Amazon DynamoDB | WRU :1500×24×30=1,080,000 x $1.25 <br> RRU: 1500×24×30=1,080,000 x 0.25 <br> 1 GB×0.25  | $1.87 |
 | Amazon S3 Storage | 1 GB x $0.023 USD | $2.30 |
-| Amazon Sagemaker | 5.00 hours x 2.448 USD per hour instance cost | $12.24  |
-| Total | |  |
+| Amazon Sagemaker | 4 notebooks x $1.935 x 5 hours | $30.96 |
+| Total | | $41.42 |
 
 
 
