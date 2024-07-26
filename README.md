@@ -56,6 +56,9 @@ When estimating the cost for this architecture, we are working with 1500 custome
 1 data scientist(s) x 4 Studio Notebook instance(s) = 4.00 Studio Notebook instance(s)
 4.00 Studio Notebook instance(s) x 5 hours per day x 1 days per month = 20.00 SageMaker Studio Notebook hours per month
 20.00 hours per month x 2.448 USD per hour instance cost = 48.96 USD(monthly On-Demand cost)
+
+
+
 ## Prerequisites
 
 Before running the notebooks, ensure that you have the following:
@@ -105,6 +108,11 @@ git clone https://github.com/anyakhatri/Personalize-Recommendations-and-Emails-w
      
 
 https://github.com/user-attachments/assets/48c25615-e538-4886-9b3d-28a2dadbc8ad
+
+
+
+
+
 
 
 
