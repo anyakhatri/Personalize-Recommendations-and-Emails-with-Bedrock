@@ -107,26 +107,6 @@ https://github.com/user-attachments/assets/74dfc9c9-a122-4f72-9e56-c562d1d55d94
 https://github.com/user-attachments/assets/73395b86-90d7-4459-975b-2c842e5a957b
 
 
-
-
-**6. Run all the notebooks**
-  - Once the notebook is open, you will see a series of cells containing code or text. To run all cells in the notebook,click on the "Cell" menu at the top, and then select "Run All" from the dropdown menu. You can monitor the progress of the execution by watching the output of each cell. Jupyter will indicate when a cell is currently running by displaying [*] next to the cell. Once all cells have been executed, you will see the final output of the last cell, and the notebook will be marked as "Idle" in the top-right corner.
-
-<img width="1048" alt="Screenshot 2024-07-22 at 2 54 31 PM" src="https://github.com/user-attachments/assets/2a77ec0a-2020-4284-85a1-ca3e5826b761">
-
-
-
-Repeat this process for all notebooks in the following order: 
-
-**(1) Dataset filtering**
-
-**(2) Personalization**
-
-**(3) Bedrock Implementation**
-
-**(4) Cleanup**
-
-
 ## Deployment Validation
 
 1. Open the AWS CloudFormation console and navigate to the stack you just created. Verify the status of the stack by checking the "Status" column. If the deployment is successful, the status should be "CREATE_COMPLETE".
@@ -148,6 +128,36 @@ Repeat this process for all notebooks in the following order:
 If all the above steps are successful, it indicates that the deployment of the CloudFormation template is successful, and the required resources are created correctly.
 
 ## Running the Guidance
+
+**1. Open the SageMaker Notebook Instance:**
+   - In the AWS Management Console, search for the "SageMaker" service
+   - Once in the SageMaker service, navigate to Notebooks under _Application and IDE's_
+   - Click on the Notebook Instance, recommendationsystem, which was created by out CloudFormation Template
+   - In the Notebook Instance details page, click on the "Open Jupyter" or "Open JupyterLab" button to launch the Jupyter Notebook environment.
+
+  
+     
+https://github.com/user-attachments/assets/73395b86-90d7-4459-975b-2c842e5a957b
+
+
+
+
+**6. Run all the notebooks**
+  - Once the notebook is open, you will see a series of cells containing code or text. To run all cells in the notebook,click on the "Cell" menu at the top, and then select "Run All" from the dropdown menu. You can monitor the progress of the execution by watching the output of each cell. Jupyter will indicate when a cell is currently running by displaying [*] next to the cell. Once all cells have been executed, you will see the final output of the last cell, and the notebook will be marked as "Idle" in the top-right corner.
+
+<img width="1048" alt="Screenshot 2024-07-22 at 2 54 31 PM" src="https://github.com/user-attachments/assets/2a77ec0a-2020-4284-85a1-ca3e5826b761">
+
+
+
+Repeat this process for all notebooks in the following order: 
+
+**(1) Dataset filtering**
+
+**(2) Personalization**
+
+**(3) Bedrock Implementation**
+
+**(4) Cleanup**
 
 ### 1. Data Preparation
 
