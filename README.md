@@ -1,4 +1,4 @@
-# Guidance for Enhancing Personalized Recommendation Systems with Amazon Bedrock
+<h1 align="center">Guidance for Enhancing Personalized Recommendation Systems with Amazon Bedrock</h1>
 
 
 ## Table of Contents
@@ -36,7 +36,7 @@ By delivering personalized recommendations and tailored communications, customer
 
 
 ### Cost
-You are responsible for the cost of the AWS services used while running this Guidance. As of 7/15/24, the cost for running this Guidance with the default settings in the US West (Oregon) is approximately $2,066.30 per month based on the following assumptions.
+You are responsible for the cost of the AWS services used while running this Guidance. As of 7/15/24, the cost for running this Guidance with the default settings in the US West (Oregon) is approximately $41.42 based on the following assumptions.
 
 
 ### Sample Cost Table
@@ -44,18 +44,14 @@ When estimating the cost for this architecture, we are working with 1500 custome
 
 | AWS Service | Dimension | Cost [USD] |
 | --- | --- | --- |
-| Amazon Personalize Ingestion, Training and Inference | ($0.05 x 1 GB) + (5 training hours x $0.24 USD) + (7,500 recommendation requests x 0.000055555) | 1.79 |
-| Amazon Comprehend | 1500 active dataset rows x 6 units per request/n 9,000 x $0.0001| 0 |
-| Amazon DynamoDB | Write Cost = $150.04<br>$150.04 + $26.14 | $176.18 |
+| Amazon Personalize Ingestion, Training and Inference |  (3 x $0.05)+ (3 x 5 hours x $0.24) + (22,500 / 1000 x $0.20)  | $8.25 |
+| Amazon Comprehend | (1500 rows x 300 characters)/100 character/unit <br>  4,500 units / 1,000 units x $1.00 | $4.50 |
+| Amazon DynamoDB | WRU :1500×24×30=1,080,000 x $1.25 <br> RRU: 1500×24×30=1,080,000 x 0.25 <br> 1 GB×0.25  | $1.87 |
 | Amazon S3 Storage | 1 GB x $0.023 USD | $2.30 |
-| Amazon Sagemaker | 5.00 hours x 2.448 USD per hour instance cost | $12.24  |
-| Total | |  |
+| Amazon Sagemaker | 4 notebooks x $1.935 x 5 hours | $30.96 |
+| Total | | $47.88 |
 
 
-
-1 data scientist(s) x 4 Studio Notebook instance(s) = 4.00 Studio Notebook instance(s)
-4.00 Studio Notebook instance(s) x 5 hours per day x 1 days per month = 20.00 SageMaker Studio Notebook hours per month
-20.00 hours per month x 2.448 USD per hour instance cost = 48.96 USD(monthly On-Demand cost)
 ## Prerequisites
 
 Before running the notebooks, ensure that you have the following:
@@ -67,10 +63,8 @@ Before running the notebooks, ensure that you have the following:
 
 
 
-**1. Clone the Repository or Download .zip file to local:**
-   - Clone the repository or locally download it with the notebooks and necessary code for the workflow.
-   - This repository should include the data preprocessing, sentiment analysis, personalization, and email template notebooks.
-
+**1. Clone the Repository**
+   - Clone the repository with the notebooks and deployment instructions using the command below:
 ```bash
 git clone https://github.com/anyakhatri/Personalize-Recommendations-and-Emails-with-Bedrock.git
 ```
@@ -80,7 +74,6 @@ git clone https://github.com/anyakhatri/Personalize-Recommendations-and-Emails-w
    - Use the AWS Console to navigate to the CloudFormation console. [CloudFormation template](https://github.com/anyakhatri/Personalize-Recommendations-and-Emails-with-Bedrock/blob/main/deployment/deployment.yaml), also found in deployment/deployment.yaml and follow the steps demonstrated below.
      
 
-https://github.com/user-attachments/assets/7fa040b9-204e-41b6-92bc-ed6eaf2234c1
 
 
 
@@ -89,42 +82,31 @@ https://github.com/user-attachments/assets/7fa040b9-204e-41b6-92bc-ed6eaf2234c1
    - Navigate to the S3 bucket created from the CloudFormation Stack and upload deployment/amazon.csv to the bucket. Follow the steps demonstrated below.
   
   
-https://github.com/user-attachments/assets/74dfc9c9-a122-4f72-9e56-c562d1d55d94
 
 
 
 **4. Choose Bedrock Model**
-  - Before you can use any Bedrock Models, you need to request model access through the AWS Console in a region where Bedrock is available. Switch to the region where you want to run Bedrock and follow documentation found [here](https://docs.aws.amazon.com/bedrock/latest/userguide/model-access.html).  Activate "Claude 3 Sonnet". Then, click "Save changes".
+  - Before you can use any Bedrock Models, you need to request model access through the AWS Console in a region where Bedrock is available. Follow documentation found [here](https://docs.aws.amazon.com/bedrock/latest/userguide/model-access.html).  Activate "Claude 3 Sonnet". Then, click "Save changes".
 
 <img width="523" alt="Screenshot 2024-07-16 at 12 33 26 PM" src="https://github.com/user-attachments/assets/51e833f2-959a-4de1-83cf-9ed3ae3fcea3">
 
 
 **5. Open the SageMaker Notebook Instance:**
-   - Launch the SageMaker notebook instance provisioned by the CloudFormation stack and click open with Jupyter or JupyterLab
-   - Upload the 4 notebooks in the same instance
+- In the AWS Management Console, search for the "SageMaker" service
+- Once in the SageMaker service, navigate to Notebooks under Application and IDE's.
+- Click on the Notebook Instance, recommendationsystem, which was created by out CloudFormation Template
+- In the Notebook Instance details page, click on the "Open Jupyter" or "Open JupyterLab" button to launch the Jupyter Notebook environment.
+- Follow the guidance below to upload all 4 notebooks to the instance.
   
      
-https://github.com/user-attachments/assets/73395b86-90d7-4459-975b-2c842e5a957b
+
+https://github.com/user-attachments/assets/48c25615-e538-4886-9b3d-28a2dadbc8ad
 
 
 
 
-**6. Run all the notebooks**
-  - Once the notebook is open, you will see a series of cells containing code or text. To run all cells in the notebook,click on the "Cell" menu at the top, and then select "Run All" from the dropdown menu. You can monitor the progress of the execution by watching the output of each cell. Jupyter will indicate when a cell is currently running by displaying [*] next to the cell. Once all cells have been executed, you will see the final output of the last cell, and the notebook will be marked as "Idle" in the top-right corner.
-
-<img width="1048" alt="Screenshot 2024-07-22 at 2 54 31 PM" src="https://github.com/user-attachments/assets/2a77ec0a-2020-4284-85a1-ca3e5826b761">
 
 
-
-Repeat this process for all notebooks in the following order: 
-
-**(1) Dataset filtering**
-
-**(2) Personalization**
-
-**(3) Bedrock Implementation**
-
-**(4) Cleanup**
 
 
 ## Deployment Validation
@@ -148,6 +130,27 @@ Repeat this process for all notebooks in the following order:
 If all the above steps are successful, it indicates that the deployment of the CloudFormation template is successful, and the required resources are created correctly.
 
 ## Running the Guidance
+
+   
+**Runnng the notebooks:**
+  - Open the first notebook, **datasetfiltering(1).ipynb**.
+  - Once the notebook is open, you will see a series of cells containing code or text.
+  - To run a specific code cell, first, click on the cell you want to execute. You'll notice that the cell's border becomes green, indicating that it's selected.
+  - Once you've selected the cell you want to run, click the "Run" button in the toolbar at the top of the notebook. It looks like a "Play" icon.
+  - When you run a cell, you'll see a * indicator in the bracket to the left of the cell. This means the cell is currently running. Once the cell has finished executing, the * will change to a sequential number, indicating the order in which the cells were run.
+
+<img width="1187" alt="Screenshot 2024-07-26 at 9 38 39 AM" src="https://github.com/user-attachments/assets/be464b34-1e0a-441d-9e0e-a17e2e4ffa37">
+
+Repeat this process for all notebooks in the following order following datasetfiltering(1).ipynb:
+
+**(2) Personalization**
+
+**(3) Bedrock Implementation**
+
+**(4) Cleanup**
+
+
+## Here is a deeper look into each notebook:
 
 ### 1. Data Preparation
 
