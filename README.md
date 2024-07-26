@@ -104,6 +104,10 @@ git clone https://github.com/anyakhatri/Personalize-Recommendations-and-Emails-w
   
      
 
+https://github.com/user-attachments/assets/48c25615-e538-4886-9b3d-28a2dadbc8ad
+
+
+
 ## Deployment Validation
 
 1. Open the AWS CloudFormation console and navigate to the stack you just created. Verify the status of the stack by checking the "Status" column. If the deployment is successful, the status should be "CREATE_COMPLETE".
