@@ -1,4 +1,4 @@
-# Guidance for Enhancing Personalized Recommendation Systems with Amazon Bedrock
+<h1 align="center">Guidance for Enhancing Personalized Recommendation Systems with Amazon Bedrock</h1>
 
 
 ## Table of Contents
