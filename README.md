@@ -100,8 +100,11 @@ https://github.com/user-attachments/assets/74dfc9c9-a122-4f72-9e56-c562d1d55d94
 
 
 **5. Open the SageMaker Notebook Instance:**
-   - Launch the SageMaker notebook instance provisioned by the CloudFormation stack and click open with Jupyter or JupyterLab
-   - Upload the 4 notebooks in the same instance
+- In the AWS Management Console, search for the "SageMaker" service
+- Once in the SageMaker service, navigate to Notebooks under Application and IDE's.
+- Click on the Notebook Instance, recommendationsystem, which was created by out CloudFormation Template
+- In the Notebook Instance details page, click on the "Open Jupyter" or "Open JupyterLab" button to launch the Jupyter Notebook environment.
+- Follow the guidance below to upload all 4 notebooks to the instance.
   
      
 https://github.com/user-attachments/assets/73395b86-90d7-4459-975b-2c842e5a957b
@@ -129,23 +132,13 @@ If all the above steps are successful, it indicates that the deployment of the C
 
 ## Running the Guidance
 
-**1. Open the SageMaker Notebook Instance:**
-   - In the AWS Management Console, search for the "SageMaker" service
-   - Once in the SageMaker service, navigate to Notebooks under _Application and IDE's_.
-   - Click on the Notebook Instance, recommendationsystem, which was created by out CloudFormation Template
-   - In the Notebook Instance details page, click on the "Open Jupyter" or "Open JupyterLab" button to launch the Jupyter Notebook environment.
-
-**2. Deploy all the notebooks:**
-   - Follow the guidance below to upload all 4 notebooks to the instance.
-
-     
-https://github.com/user-attachments/assets/73395b86-90d7-4459-975b-2c842e5a957b
-
-**3. Runnng the notebooks:**
-  - Open the first notebook, datasetfiltering(1).ipynb. Once the notebook is open, you will see a series of cells containing code or text.
+   
+**Runnng the notebooks:**
+  - Open the first notebook, **datasetfiltering(1).ipynb**.
+  - Once the notebook is open, you will see a series of cells containing code or text.
   - To run a specific code cell, first, click on the cell you want to execute. You'll notice that the cell's border becomes green, indicating that it's selected.
   - Once you've selected the cell you want to run, click the "Run" button in the toolbar at the top of the notebook. It looks like a "Play" icon.
-  - When you run a cell, you'll see a [*] indicator in the bracket to the left of the cell. This means the cell is currently running.Once the cell has finished executing, the [*] will change to a sequential number, indicating the order in which the cells were run
+  - When you run a cell, you'll see a [*] indicator in the bracket to the left of the cell. This means the cell is currently running. Once the cell has finished executing, the [*] will change to a sequential number, indicating the order in which the cells were run
 
 
 Repeat this process for all notebooks in the following order following datasetfiltering(1).ipynb:
@@ -155,6 +148,7 @@ Repeat this process for all notebooks in the following order following datasetfi
 **(3) Bedrock Implementation**
 
 **(4) Cleanup**
+
 
 
 Here is a deeper look into each notebook:
