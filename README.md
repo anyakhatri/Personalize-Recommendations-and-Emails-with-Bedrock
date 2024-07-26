@@ -149,8 +149,8 @@ Repeat this process for all notebooks in the following order following datasetfi
 **(4) Cleanup**
 
 
+## Here is a deeper look into each notebook:
 
-Here is a deeper look into each notebook:
 ### 1. Data Preparation
 
 This notebook takes an Amazon product dataset (amazon.csv) and filters it to extract relevant product and user data. It then writes the data back to DynamoDB and creates an interaction dataset. Finally, it saves these files to an Amazon S3 bucket.
