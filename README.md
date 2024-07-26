@@ -107,7 +107,6 @@ https://github.com/user-attachments/assets/74dfc9c9-a122-4f72-9e56-c562d1d55d94
 - Follow the guidance below to upload all 4 notebooks to the instance.
   
      
-https://github.com/user-attachments/assets/73395b86-90d7-4459-975b-2c842e5a957b
 
 
 ## Deployment Validation
@@ -140,6 +139,7 @@ If all the above steps are successful, it indicates that the deployment of the C
   - Once you've selected the cell you want to run, click the "Run" button in the toolbar at the top of the notebook. It looks like a "Play" icon.
   - When you run a cell, you'll see a [*] indicator in the bracket to the left of the cell. This means the cell is currently running. Once the cell has finished executing, the [*] will change to a sequential number, indicating the order in which the cells were run
 
+<img width="1187" alt="Screenshot 2024-07-26 at 9 38 39 AM" src="https://github.com/user-attachments/assets/be464b34-1e0a-441d-9e0e-a17e2e4ffa37">
 
 Repeat this process for all notebooks in the following order following datasetfiltering(1).ipynb:
 
