@@ -137,7 +137,7 @@ If all the above steps are successful, it indicates that the deployment of the C
   - Once the notebook is open, you will see a series of cells containing code or text.
   - To run a specific code cell, first, click on the cell you want to execute. You'll notice that the cell's border becomes green, indicating that it's selected.
   - Once you've selected the cell you want to run, click the "Run" button in the toolbar at the top of the notebook. It looks like a "Play" icon.
-  - When you run a cell, you'll see a [*] indicator in the bracket to the left of the cell. This means the cell is currently running. Once the cell has finished executing, the [*] will change to a sequential number, indicating the order in which the cells were run
+  - When you run a cell, you'll see a * indicator in the bracket to the left of the cell. This means the cell is currently running. Once the cell has finished executing, the * will change to a sequential number, indicating the order in which the cells were run.
 
 <img width="1187" alt="Screenshot 2024-07-26 at 9 38 39 AM" src="https://github.com/user-attachments/assets/be464b34-1e0a-441d-9e0e-a17e2e4ffa37">
 
