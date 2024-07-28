@@ -46,6 +46,8 @@ Resources:
                 Action:
                   - "iam:CreateRole"
                   - "iam:AttachRolePolicy"
+                  - "iam:DetachRolePolicy" 
+                  - "iam:DeleteRole" 
                 Resource: "*"
               - Effect: Allow
                 Action:
