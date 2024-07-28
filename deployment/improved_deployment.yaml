@@ -38,21 +38,16 @@ Resources:
         - "arn:aws:iam::aws:policy/AmazonS3FullAccess"
         - "arn:aws:iam::aws:policy/AWSCloudFormationFullAccess"
       Policies:
-        - PolicyName: CreateRolePolicy
+        - PolicyName: ManagePersonalizeRolePolicy
           PolicyDocument:
             Version: "2012-10-17"
             Statement:
               - Effect: Allow
                 Action:
-                  - "iam:CreateRole"
-                  - "iam:AttachRolePolicy"
-                  - "iam:DetachRolePolicy" 
-                  - "iam:DeleteRole" 
-                Resource: "*"
-              - Effect: Allow
-                Action:
-                  - "cloudformation:DescribeStacks"
-                Resource: "*"
+                  - "iam:ListAttachedRolePolicies"
+                  - "iam:DetachRolePolicy"
+                  - "iam:DeleteRole"
+                Resource: !GetAtt PersonalizeIamRole.Arn
       Tags:
         - Key: AppManagerCFNStackKey
           Value: !Ref 'AWS::StackId'
@@ -61,6 +56,7 @@ Resources:
   PersonalizeIamRole:
     Type: "AWS::IAM::Role"
     Properties:
+      RoleName: PersonalizeRolePOC
       AssumeRolePolicyDocument:
         Version: '2012-10-17'
         Statement:
