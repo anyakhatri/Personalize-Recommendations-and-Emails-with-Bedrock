@@ -32,7 +32,8 @@ By delivering personalized recommendations and tailored communications, customer
 
 ### Architecture
 
-[guidance-architecture-diagram-template -4th- draft.pptx](https://github.com/user-attachments/files/16461864/guidance-architecture-diagram-template.-4th-.draft.pptx)
+![Uploading architecture.png…]()
+
 
 
 ### Cost
