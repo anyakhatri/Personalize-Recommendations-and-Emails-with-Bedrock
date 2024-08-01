@@ -32,7 +32,7 @@ By delivering personalized recommendations and tailored communications, customer
 
 ### Architecture
 
-<img width="909" alt="architecture" src="https://github.com/user-attachments/assets/a73e5f84-133e-4567-b5c8-2539a322e982">
+[guidance-architecture-diagram-template -4th- draft.pptx](https://github.com/user-attachments/files/16461864/guidance-architecture-diagram-template.-4th-.draft.pptx)
 
 
 ### Cost
