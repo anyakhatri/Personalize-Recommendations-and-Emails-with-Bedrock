@@ -4,7 +4,7 @@ Description: Creates an S3 Bucket, IAM Roles & Policy, and SageMaker Notebook to
 Parameters:
   BucketName:
     Type: String
-    Description: Name of the S3 bucket to be created
+    Description: Name of the S3 bucket to be created. Must have personalize in the title.
 
 Resources:
   # Amazon S3 Bucket
