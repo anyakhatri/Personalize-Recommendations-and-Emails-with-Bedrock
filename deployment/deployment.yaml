@@ -1,12 +1,17 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: Creates an S3 Bucket, IAM Roles & Policy, and SageMaker Notebook to work with Amazon Personalize.
 
+Parameters:
+  BucketName:
+    Type: String
+    Description: Name of the S3 bucket to be created
+
 Resources:
   # Amazon S3 Bucket
   S3Bucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: personalizeproductreviewdata
+      BucketName: !Ref BucketName
       Tags:
         - Key: AppManagerCFNStackKey
           Value: !Ref 'AWS::StackId'
@@ -31,8 +36,9 @@ Resources:
         - "arn:aws:iam::aws:policy/ComprehendFullAccess"
         - "arn:aws:iam::aws:policy/AmazonBedrockFullAccess"
         - "arn:aws:iam::aws:policy/AmazonS3FullAccess"
+        - "arn:aws:iam::aws:policy/AWSCloudFormationFullAccess"
       Policies:
-        - PolicyName: CreateRolePolicy
+        - PolicyName: ManageSelfPolicy
           PolicyDocument:
             Version: "2012-10-17"
             Statement:
@@ -40,6 +46,12 @@ Resources:
                 Action:
                   - "iam:CreateRole"
                   - "iam:AttachRolePolicy"
+                  - "iam:DetachRolePolicy"
+                  - "iam:DeleteRole"
+                Resource: "*"
+              - Effect: Allow
+                Action:
+                  - "cloudformation:DescribeStacks"
                 Resource: "*"
       Tags:
         - Key: AppManagerCFNStackKey
@@ -60,6 +72,22 @@ Resources:
       ManagedPolicyArns:
         - "arn:aws:iam::aws:policy/service-role/AmazonPersonalizeFullAccess"
         - "arn:aws:iam::aws:policy/AmazonSSMReadOnlyAccess"
+      Policies:
+        - PolicyName: ManageSelfPolicy
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - "iam:CreateRole"
+                  - "iam:AttachRolePolicy"
+                  - "iam:DetachRolePolicy"
+                  - "iam:DeleteRole"
+                Resource: "*"
+              - Effect: Allow
+                Action:
+                  - "cloudformation:DescribeStacks"
+                Resource: "*"
       Tags:
         - Key: AppManagerCFNStackKey
           Value: !Ref 'AWS::StackId'
@@ -75,14 +103,14 @@ Resources:
             Action:
               - "s3:*"
             Resource:
-              - !Sub arn:aws:s3:::personalizeproductreviewdata
-              - !Sub arn:aws:s3:::personalizeproductreviewdata/*
+              - !Sub "arn:aws:s3:::${BucketName}"
+              - !Sub "arn:aws:s3:::${BucketName}/*"
           - Effect: Allow
             Action:
               - "s3:GetObject*"
             Resource:
-              - !Sub arn:aws:s3:::elementalrodeo99-us-west-1/aim312
-              - !Sub arn:aws:s3:::elementalrodeo99-us-west-1/aim312/*
+              - !Sub "arn:aws:s3:::elementalrodeo99-us-west-1/aim312"
+              - !Sub "arn:aws:s3:::elementalrodeo99-us-west-1/aim312/*"
           - Effect: Allow
             Action:
               - "bedrock:*"
@@ -107,8 +135,8 @@ Resources:
               - 's3:ListBucket'
             Effect: Allow
             Resource:
-              - !Sub arn:aws:s3:::personalizeproductreviewdata
-              - !Sub arn:aws:s3:::personalizeproductreviewdata/*
+              - !Sub "arn:aws:s3:::${BucketName}"
+              - !Sub "arn:aws:s3:::${BucketName}/*"
             Principal:
               Service: personalize.amazonaws.com
 
@@ -127,7 +155,7 @@ Resources:
     Properties:
       Name: /cloudformation/personalize-s3-bucket
       Type: String
-      Value: personalizeproductreviewdata
+      Value: !Ref BucketName
       Description: SSM Parameter containing the s3 bucket for Personalize Samples.
       Tags:
         Key: AppManagerCFNStackKey
@@ -147,7 +175,7 @@ Resources:
 
 Outputs:
   S3Bucket:
-    Value: personalizeproductreviewdata
+    Value: !Ref BucketName
     Description: S3 Bucket for object storage
   NotebookInstance:
     Value: !Ref NotebookInstance
