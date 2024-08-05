@@ -77,6 +77,9 @@ git clone https://github.com/anyakhatri/Personalize-Recommendations-and-Emails-w
 
 
 
+https://github.com/user-attachments/assets/760387c0-313c-419e-86ad-c63264ccbcc7
+
+
 
 
 **3. Upload amazon.csv to the S3 Bucket**
