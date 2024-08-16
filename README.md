@@ -1,4 +1,4 @@
-<h1 align="center">Guidance for Enhancing Personalized Recommendation Systems with Amazon Bedrock</h1>
+<h1 align="center">Guidance-fore-Personalized-Recommendation-Notifications-on-AWS</h1>
 
 
 ## Table of Contents
@@ -32,7 +32,7 @@ By delivering personalized recommendations and tailored communications, customer
 
 ### Architecture
 
-![Uploading architecture.png…]()
+<img width="955" alt="architecture" src="https://github.com/user-attachments/assets/1157c154-d91f-4d42-a085-8a577b07f14a">
 
 
 
@@ -76,8 +76,7 @@ git clone https://github.com/anyakhatri/Personalize-Recommendations-and-Emails-w
      
 
 
-
-https://github.com/user-attachments/assets/760387c0-313c-419e-86ad-c63264ccbcc7
+https://github.com/user-attachments/assets/baeece97-e46e-49df-b141-5c808e519fe5
 
 
 
@@ -85,8 +84,8 @@ https://github.com/user-attachments/assets/760387c0-313c-419e-86ad-c63264ccbcc7
 **3. Upload amazon.csv to the S3 Bucket**
    - Navigate to the S3 bucket created from the CloudFormation Stack and upload deployment/amazon.csv to the bucket.
   
-  
-<img width="1233" alt="Screenshot 2024-08-05 at 2 07 20 PM" src="https://github.com/user-attachments/assets/349b057a-9436-4051-bba0-7390cd9a5940">
+  <img width="1233" alt="Screenshot 2024-08-05 at 2 07 20 PM" src="https://github.com/user-attachments/assets/b563dda7-fdc9-4fc1-b09f-021bf7a2e571">
+
 
 
 
@@ -216,7 +215,7 @@ Steps:
 Run the resource notebook cleanup(4) to clean up all associated resources included in the Jupyter notebooks. To delete the stack, run the following command in the AWS CLI
 
 ```bash
-aws cloudformation delete-stack --stack-name recommendations
+aws cloudformation delete-stack --stack-name <YOUR-STACK-NAME>
 ```
 
 
